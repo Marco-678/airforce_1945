@@ -20,7 +20,7 @@ layout_mode = 0
 offset_left = 199.0
 offset_top = 403.0
 offset_right = 465.0
-offset_bottom = 572.0
+offset_bottom = 623.0
 text = "START"
 script = ExtResource("2_ekxnf")
 
