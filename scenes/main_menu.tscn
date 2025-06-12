@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Space" type="Sprite2D" parent="."]
-position = Vector2(303, 584)
+position = Vector2(317, 383)
 texture = ExtResource("1_l6cm7")
 
 [node name="Button" type="Button" parent="."]
