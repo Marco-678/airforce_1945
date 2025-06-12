@@ -27,4 +27,7 @@ shape = SubResource("CapsuleShape2D_a4ywr")
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
 
+[node name="DelayTime2" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
