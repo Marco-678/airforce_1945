@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1ysqe5ygjwqq"]
+
+[ext_resource type="Texture2D" uid="uid://l55wjlt4holn" path="res://assets/space.png" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/button.gd" id="2_ekxnf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(303, 584)
+texture = ExtResource("1_l6cm7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 403.0
+offset_right = 465.0
+offset_bottom = 572.0
+text = "START"
+script = ExtResource("2_ekxnf")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

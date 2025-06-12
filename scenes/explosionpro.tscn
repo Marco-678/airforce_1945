@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://dit205fx53lkt"]
+
+[ext_resource type="Texture2D" uid="uid://d2i67itncn0n6" path="res://assets/1000043060.png" id="1_soupm"]
+[ext_resource type="Script" uid="uid://dlvw6t7g5qhdq" path="res://scripts/explosionpro.gd" id="1_tmuor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmuor"]
+atlas = ExtResource("1_soupm")
+region = Rect2(429, 204, 143, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10twt"]
+atlas = ExtResource("1_soupm")
+region = Rect2(286, 204, 143, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf53b"]
+atlas = ExtResource("1_soupm")
+region = Rect2(143, 204, 143, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6766"]
+atlas = ExtResource("1_soupm")
+region = Rect2(0, 204, 143, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_soupm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmuor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10twt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf53b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6766")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="explosionpro" type="AnimatedSprite2D"]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_soupm")
+autoplay = "default"
+script = ExtResource("1_tmuor")
