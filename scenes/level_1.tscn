@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cjygu1y6xccwm"]
+[gd_scene load_steps=15 format=3 uid="uid://cswbhd06kpaqe"]
 
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_2aecg"]
 [ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_6dial"]

@@ -1,38 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuaa7gh51vnpm"]
+[gd_scene load_steps=9 format=3 uid="uid://u4acwyaaxcmx"]
 
 [ext_resource type="Script" uid="uid://cxm21u81c1xkn" path="res://scripts/bulletrightenemy.gd" id="1_37t7f"]
-[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="2_784dc"]
+[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/2z_R9t (1).png" id="2_37t7f"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68kxk"]
-atlas = ExtResource("2_784dc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_784dc"]
+atlas = ExtResource("2_37t7f")
 region = Rect2(3024, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u80qw"]
-atlas = ExtResource("2_784dc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vd3p"]
+atlas = ExtResource("2_37t7f")
 region = Rect2(3168, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yh5kg"]
-atlas = ExtResource("2_784dc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqpoa"]
+atlas = ExtResource("2_37t7f")
 region = Rect2(3312, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qrg2d"]
-atlas = ExtResource("2_784dc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmcd5"]
+atlas = ExtResource("2_37t7f")
 region = Rect2(3456, 1152, 144, 144)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_12ia5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_68kxk")
+"texture": SubResource("AtlasTexture_784dc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u80qw")
+"texture": SubResource("AtlasTexture_0vd3p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yh5kg")
+"texture": SubResource("AtlasTexture_lqpoa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qrg2d")
+"texture": SubResource("AtlasTexture_fmcd5")
 }],
 "loop": true,
 "name": &"default",
@@ -50,7 +50,7 @@ script = ExtResource("1_37t7f")
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_12ia5")
 autoplay = "default"
-frame_progress = 0.776781
+frame_progress = 0.416707
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.3, 0.3)

@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://oxegb5y44kue"]
+
+[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/2z_R9t (1).png" id="1_81ofr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2pv6"]
+atlas = ExtResource("1_81ofr")
+region = Rect2(0, 0, 144, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uks2u"]
+atlas = ExtResource("1_81ofr")
+region = Rect2(144, 0, 144, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry271"]
+atlas = ExtResource("1_81ofr")
+region = Rect2(288, 0, 144, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2sri"]
+atlas = ExtResource("1_81ofr")
+region = Rect2(432, 0, 144, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdsts"]
+atlas = ExtResource("1_81ofr")
+region = Rect2(576, 0, 144, 156)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aobth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2pv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uks2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry271")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2sri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdsts")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Propulsor_airplane" type="AnimatedSprite2D"]
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_aobth")
+autoplay = "default"

@@ -6,6 +6,7 @@ const A_X = 8;
 const A_RX = 4;
 
 const EXPLOSION = preload("res://scenes/explosions.tscn")
+const PROPULSOR = preload("res://scenes/propulsor_airplane.tscn")
 
 var speed_y = 0
 var speed_x = 0
@@ -21,15 +22,19 @@ var l = 0
 var score = 0
 var fireDelay = 0.1
 var giro = 0.5
+var propulsor
 
 
 var plBullet = preload("res://scenes/bullet.tscn")
 
 func _ready() -> void:
-	pass
+	propulsor = PROPULSOR.instantiate()
+	get_tree().current_scene.add_child(propulsor)
 
 func _physics_process(_delta):
 	
+	propulsor.position.x = position.x
+	propulsor.position.y = position.y + 40
 	
 	var ay = 0
 	var ax = 0

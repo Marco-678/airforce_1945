@@ -1,22 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://dliepit1rq4us"]
+[gd_scene load_steps=9 format=3 uid="uid://cuaa7gh51vnpm"]
 
 [ext_resource type="Script" uid="uid://c5slmro1e06bo" path="res://scripts/bullet_leftenemy.gd" id="1_2lb5q"]
-[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="1_on7st"]
+[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/2z_R9t (1).png" id="2_2lb5q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxlb7"]
-atlas = ExtResource("1_on7st")
+atlas = ExtResource("2_2lb5q")
 region = Rect2(3024, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68kxk"]
-atlas = ExtResource("1_on7st")
+atlas = ExtResource("2_2lb5q")
 region = Rect2(3168, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u80qw"]
-atlas = ExtResource("1_on7st")
+atlas = ExtResource("2_2lb5q")
 region = Rect2(3312, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yh5kg"]
-atlas = ExtResource("1_on7st")
+atlas = ExtResource("2_2lb5q")
 region = Rect2(3456, 1152, 144, 144)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qrg2d"]
@@ -49,7 +49,6 @@ script = ExtResource("1_2lb5q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_qrg2d")
-frame = 3
 frame_progress = 0.089514
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
