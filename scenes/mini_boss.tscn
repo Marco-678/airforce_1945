@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4imatpw8tcn6"]
 
-[ext_resource type="Script" path="res://scripts/mini_boss.gd" id="1_pso4q"]
+[ext_resource type="Script" uid="uid://bkkjnmlwq7s8w" path="res://scripts/mini_boss.gd" id="1_pso4q"]
 [ext_resource type="Texture2D" uid="uid://cate7pawij0ll" path="res://assets/miniboss.png" id="2_p6s6w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rl7on"]
@@ -23,6 +23,10 @@ shape = SubResource("CapsuleShape2D_rl7on")
 
 [node name="DelayTime" type="Timer" parent="."]
 wait_time = 0.2
+one_shot = true
+
+[node name="DelayTimeLaser" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

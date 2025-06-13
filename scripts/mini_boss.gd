@@ -1,10 +1,11 @@
 extends Area2D
 const EXPLOSION = preload("res://scenes/explosions.tscn")
 const plBulletenemyMboss = preload("res://scenes/bullet_enemy.tscn")
+const plMiniBossLaser = preload("res://scenes/Laser_MiniBoss.tscn")
 
 var fireDelay = 0.3
 var life = 30
-
+var LaserDelay = 4
 func _ready() -> void:
 
 
@@ -23,6 +24,11 @@ func _process(delta: float) -> void:
 		bulletenemyMboss.position = position
 		get_tree().current_scene.add_child(bulletenemyMboss)
 		
+	if $DelayTimelaser.is_stopped():
+		$DelayTimelaser.start(LaserDelay)
+		var opbulletenemyMboss = plMiniBossLaser.instantiate()
+		opbulletenemyMboss.position = position
+		get_tree().current_scene.add_child(opbulletenemyMboss)
 
 
 
