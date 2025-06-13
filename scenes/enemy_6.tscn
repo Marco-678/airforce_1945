@@ -1,23 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://c88wfi070rvt1"]
+[gd_scene load_steps=8 format=3 uid="uid://c88wfi070rvt1"]
 
 [ext_resource type="Script" uid="uid://dtlqd3u3lbvvt" path="res://scripts/enemy_6.gd" id="1_3xl3f"]
-[ext_resource type="Texture2D" uid="uid://b02d4hlbns4av" path="res://assets/enemy1.png" id="1_uf8rq"]
+[ext_resource type="Texture2D" uid="uid://ch00a1qo0gkup" path="res://assets/enemy3/frame-01 (4).png" id="2_nl5s5"]
+[ext_resource type="Texture2D" uid="uid://dc4qb5gnk74a1" path="res://assets/enemy3/frame-02 (2).png" id="3_u0f2w"]
+[ext_resource type="Texture2D" uid="uid://b14x31dclliu3" path="res://assets/enemy3/frame-03 (2).png" id="4_jv3bd"]
+[ext_resource type="Texture2D" uid="uid://bv1himbjy6vc0" path="res://assets/enemy3/frame-04 (2).png" id="5_tbg1l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ji7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nl5s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u0f2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jv3bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tbg1l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pdn8s"]
-radius = 76.0
-height = 212.0
+radius = 75.0
+height = 150.0
 
 [node name="Enemy 6" type="Area2D"]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_3xl3f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_pdn8s")
-
-[node name="Enemy1" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_uf8rq")
 
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
@@ -28,5 +44,16 @@ one_shot = true
 [node name="DelayTime3" type="Timer" parent="."]
 wait_time = 0.3
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -84)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_0ji7c")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -88)
+shape = SubResource("CapsuleShape2D_pdn8s")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
