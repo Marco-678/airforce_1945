@@ -140,6 +140,12 @@ func _process(delta: float) -> void:
 		var bullet = plBullet.instantiate()
 		bullet.position = position
 		get_tree().current_scene.add_child(bullet)
+	if Global.life <= 0:
+		
+		var explosion = EXPLOSION.instantiate()
+		explosion.global_position = global_position
+		get_tree().current_scene.add_child(explosion)
+		queue_free()
 		
 func _on_area_entered(area: Area2D) -> void:
 	Global.life -= 1
