@@ -1,7 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dad3l6c6yroig"]
+[gd_scene load_steps=8 format=3 uid="uid://dad3l6c6yroig"]
 
 [ext_resource type="Script" uid="uid://ds8yr33a0qogg" path="res://scripts/enemy_4.gd" id="1_0cinm"]
-[ext_resource type="Texture2D" uid="uid://b02d4hlbns4av" path="res://assets/enemy1.png" id="2_lkpdo"]
+[ext_resource type="Texture2D" uid="uid://dd3sbogwgwolf" path="res://assets/enemy2/frame-01 (3) (1).png" id="2_50ooa"]
+[ext_resource type="Texture2D" uid="uid://dovvy2a7fdw5y" path="res://assets/enemy2/frame-02 (1) (1).png" id="3_eob20"]
+[ext_resource type="Texture2D" uid="uid://b5bhfjdfm6vd2" path="res://assets/enemy2/frame-03 (1) (1).png" id="4_ou0w7"]
+[ext_resource type="Texture2D" uid="uid://c2sxfmv15q4t0" path="res://assets/enemy2/frame-04 (1) (1).png" id="5_fdq1e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qy6ml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_50ooa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eob20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ou0w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fdq1e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ur2lb"]
 radius = 51.0
@@ -12,15 +35,16 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_0cinm")
 
-[node name="Enemy1" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_lkpdo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, -8)
-shape = SubResource("CapsuleShape2D_ur2lb")
-
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_qy6ml")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ur2lb")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
