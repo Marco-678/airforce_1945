@@ -1,22 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://cuaa7gh51vnpm"]
 
-[ext_resource type="Script" uid="uid://cxm21u81c1xkn" path="res://scripts/bulletrightenemy.gd" id="1_2lb5q"]
-[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/2z_R9t (1).png" id="2_cxlb7"]
+[ext_resource type="Script" uid="uid://cxm21u81c1xkn" path="res://scripts/bulletrightenemy.gd" id="1_37t7f"]
+[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="2_784dc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68kxk"]
-atlas = ExtResource("2_cxlb7")
+atlas = ExtResource("2_784dc")
 region = Rect2(3024, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u80qw"]
-atlas = ExtResource("2_cxlb7")
+atlas = ExtResource("2_784dc")
 region = Rect2(3168, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yh5kg"]
-atlas = ExtResource("2_cxlb7")
+atlas = ExtResource("2_784dc")
 region = Rect2(3312, 1152, 144, 144)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrg2d"]
-atlas = ExtResource("2_cxlb7")
+atlas = ExtResource("2_784dc")
 region = Rect2(3456, 1152, 144, 144)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_12ia5"]
@@ -42,9 +42,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_srh68"]
 radius = 43.0
 
-[node name="BulletLeftenemy" type="Area2D"]
+[node name="BulletRightenemy" type="Area2D"]
 collision_layer = 8
-script = ExtResource("1_2lb5q")
+script = ExtResource("1_37t7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
