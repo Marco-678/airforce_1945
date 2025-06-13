@@ -21,8 +21,7 @@ var l = 0
 
 var score = 0
 var fireDelay = 0.1
-var giro = 0.5
-var propulsor
+var propulsor = 0
 
 
 var plBullet = preload("res://scenes/bullet.tscn")
@@ -93,7 +92,7 @@ func _physics_process(_delta):
 		deltaleft2 += _delta
 		deltaright2 = 0
 		
-		if deltaleft2 < 0.3:
+		if deltaleft2 < 0.22:
 			$AnimatedSprite2D.play("left_indietro")
 		else:
 			l = 0
