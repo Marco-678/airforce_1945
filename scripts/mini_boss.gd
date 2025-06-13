@@ -24,8 +24,8 @@ func _process(delta: float) -> void:
 		bulletenemyMboss.position = position
 		get_tree().current_scene.add_child(bulletenemyMboss)
 		
-	if $DelayTimelaser.is_stopped():
-		$DelayTimelaser.start(LaserDelay)
+	if $DelayTimeLaser.is_stopped():
+		$DelayTimeLaser.start(LaserDelay)
 		var opbulletenemyMboss = plMiniBossLaser.instantiate()
 		opbulletenemyMboss.position = position
 		get_tree().current_scene.add_child(opbulletenemyMboss)
