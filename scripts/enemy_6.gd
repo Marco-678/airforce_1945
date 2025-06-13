@@ -3,13 +3,13 @@ extends Area2D
 const EXPLOSION = preload("res://scenes/explosions.tscn")
 
 
-var plBulletenemy = preload("res://scenes/bullet_enemy.tscn")
+var plBulletenemy = preload("res://scenes/bullet_leftenemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
-var plBulletenemy3 = preload("res://scenes/bullet_leftenemy.tscn")
+var plBulletenemy3 = preload("res://scenes/bullet_rightenemy.tscn")
 var fireDelay = 0.3
-var fireDelay2 = 0.5
+var fireDelay2 = 0.3
 var fireDelay3 = 0.3
-var life = 9
+var life = 12
 
 
 func _ready() -> void:

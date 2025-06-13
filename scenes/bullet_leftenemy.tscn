@@ -1,27 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuaa7gh51vnpm"]
+[gd_scene load_steps=9 format=3 uid="uid://dliepit1rq4us"]
 
-[ext_resource type="Script" uid="uid://cxm21u81c1xkn" path="res://scripts/bulletleftenemy.gd" id="1_2lb5q"]
-[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="2_cxlb7"]
+[ext_resource type="Script" uid="uid://c5slmro1e06bo" path="res://scripts/bullet_leftenemy.gd" id="1_2lb5q"]
+[ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="1_on7st"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68kxk"]
-atlas = ExtResource("2_cxlb7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxlb7"]
+atlas = ExtResource("1_on7st")
 region = Rect2(3024, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u80qw"]
-atlas = ExtResource("2_cxlb7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_68kxk"]
+atlas = ExtResource("1_on7st")
 region = Rect2(3168, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yh5kg"]
-atlas = ExtResource("2_cxlb7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_u80qw"]
+atlas = ExtResource("1_on7st")
 region = Rect2(3312, 1152, 144, 144)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qrg2d"]
-atlas = ExtResource("2_cxlb7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh5kg"]
+atlas = ExtResource("1_on7st")
 region = Rect2(3456, 1152, 144, 144)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_12ia5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrg2d"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxlb7")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_68kxk")
 }, {
@@ -30,28 +33,25 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yh5kg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qrg2d")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_srh68"]
-radius = 43.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_12ia5"]
+radius = 39.8497
 
-[node name="BulletLeftenemy" type="Area2D"]
+[node name="Bullet_leftenemy" type="Area2D"]
 collision_layer = 8
 script = ExtResource("1_2lb5q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_12ia5")
-autoplay = "default"
-frame_progress = 0.776781
+sprite_frames = SubResource("SpriteFrames_qrg2d")
+frame = 3
+frame_progress = 0.089514
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.3, 0.3)
-shape = SubResource("CircleShape2D_srh68")
+shape = SubResource("CircleShape2D_12ia5")
