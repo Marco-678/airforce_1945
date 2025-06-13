@@ -13,11 +13,9 @@ collision_mask = 5
 script = ExtResource("1_3xl3f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -106)
 shape = SubResource("CapsuleShape2D_pdn8s")
 
 [node name="Enemy1" type="Sprite2D" parent="."]
-position = Vector2(-6, -85)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_uf8rq")
 
@@ -25,6 +23,10 @@ texture = ExtResource("1_uf8rq")
 one_shot = true
 
 [node name="DelayTime2" type="Timer" parent="."]
+one_shot = true
+
+[node name="DelayTime3" type="Timer" parent="."]
+wait_time = 0.3
 one_shot = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

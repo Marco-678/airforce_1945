@@ -5,9 +5,11 @@ const EXPLOSION = preload("res://scenes/explosions.tscn")
 
 var plBulletenemy = preload("res://scenes/bullet_enemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
+var plBulletenemy3 = preload("res://scenes/bullet_leftenemy.tscn")
 var fireDelay = 0.3
 var fireDelay2 = 0.5
-var life = 5
+var fireDelay3 = 0.3
+var life = 9
 
 
 func _ready() -> void:
@@ -31,6 +33,12 @@ func _process(delta: float) -> void:
 		var bulletenemy2 = plBulletenemy2.instantiate()
 		bulletenemy2.position = position
 		get_tree().current_scene.add_child(bulletenemy2)
+		
+	if $DelayTime3.is_stopped():
+		$DelayTime3.start(fireDelay3)
+		var bulletenemy3 = plBulletenemy3.instantiate()
+		bulletenemy3.position = position
+		get_tree().current_scene.add_child(bulletenemy3)
 		
 		
 func _on_area_entered(area: Area2D) -> void:
