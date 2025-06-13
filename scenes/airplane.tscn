@@ -177,3 +177,6 @@ shape = SubResource("CapsuleShape2D_rnjyy")
 
 [node name="Delay" type="Timer" parent="."]
 one_shot = true
+
+[node name="DelayTimeLaser" type="Timer" parent="."]
+one_shot = true
