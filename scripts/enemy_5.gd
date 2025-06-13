@@ -11,12 +11,12 @@ var life = 5
 
 
 func _ready() -> void:
-	position.x = -500
+	position.x = -900
 
 func _physics_process(delta: float) -> void:
 	
 	position.x += 1
-	position.y = -pow(position.x,2)/80 + 5*position.x
+	position.y = -pow(position.x,2)/90 + 5*position.x
 	
 func _process(delta: float) -> void:
 	
@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		bulletenemy2.position = position
 		get_tree().current_scene.add_child(bulletenemy2)
 		
-
+		
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
 	if life <= 1:
@@ -40,3 +40,4 @@ func _on_area_entered(area: Area2D) -> void:
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
+		

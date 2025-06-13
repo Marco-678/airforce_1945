@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bu10o5n4id6br"]
+[gd_scene load_steps=15 format=3 uid="uid://bu10o5n4id6br"]
 
 [ext_resource type="Script" uid="uid://diy16ab6kqqdb" path="res://scripts/node_2d.gd" id="1_j7wrs"]
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_rnjyy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbyhg2xhu1lou" path="res://scenes/enemy_1.tscn" id="5_04qyp"]
 [ext_resource type="PackedScene" uid="uid://ca01k6uxgbvy1" path="res://scenes/enemy_2.tscn" id="8_hh0fu"]
 [ext_resource type="PackedScene" uid="uid://c4imatpw8tcn6" path="res://scenes/mini_boss.tscn" id="9_hsdmi"]
+[ext_resource type="PackedScene" uid="uid://dvpxs8jfv2i6v" path="res://scenes/enemy_5.tscn" id="9_ifa78"]
 [ext_resource type="PackedScene" uid="uid://ll0y5il8obvu" path="res://scenes/enemy_3.tscn" id="10_dubn7"]
 [ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_f6ptj"]
 [ext_resource type="PackedScene" uid="uid://dad3l6c6yroig" path="res://scenes/enemy_4.tscn" id="12_hsdmi"]
@@ -33,6 +34,8 @@ position = Vector2(-1, -1)
 [node name="Enemy 3" parent="Game" instance=ExtResource("10_dubn7")]
 
 [node name="Enemy 4" parent="Game" instance=ExtResource("12_hsdmi")]
+
+[node name="Enemy 5" parent="Game" instance=ExtResource("9_ifa78")]
 
 [node name="MiniBoss" parent="Game" instance=ExtResource("9_hsdmi")]
 

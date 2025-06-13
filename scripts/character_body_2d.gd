@@ -21,7 +21,7 @@ var fireDelay = 0.1
 var plBullet = preload("res://scenes/bullet.tscn")
 
 func _ready() -> void:
-	add_to_group("player")
+	pass
 
 func _physics_process(_delta):
 	
