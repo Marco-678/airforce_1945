@@ -13,6 +13,8 @@ var module_y = 0
 var module_x = 0
 var deltaright = 0
 var deltaleft = 0
+var r = 0
+var l = 0
 
 var score = 0
 var fireDelay = 0.1
@@ -45,25 +47,45 @@ func _physics_process(_delta):
 			ay = 0
 		
 	if Input.is_action_pressed("move_right"):
+		r = 1
+		l = 0
 		ax = A_X
 		deltaright += _delta
 		deltaleft = 0
+		
 		if deltaright < 0.5:
 			$AnimatedSprite2D.play("right")
 		else:
 			$AnimatedSprite2D.play("right_fisso")
 		
 	elif Input.is_action_pressed("move_left"):
+		r = 0
+		l = 1
 		ax = A_X * -1
 		deltaleft += _delta
 		deltaright = 0
+		
 		if deltaleft < 0.5:
 			$AnimatedSprite2D.play("left")
 		else:
 			$AnimatedSprite2D.play("left_fisso")
+		
+		
+	elif r == 1 and not Input.is_action_pressed("move_right"):
+		$AnimatedSprite2D.play("right_indietro")
+		r = 0
+		
+	elif l == 1 and not Input.is_action_pressed("move_left"):
+		$AnimatedSprite2D.play("left_indietro")
+		l = 0
+		
+		
+			
 	else:
 		deltaright = 0
 		deltaleft = 0
+		r = 0
+		l = 0
 		$AnimatedSprite2D.play("default")
 		if speed_x < -0.1:
 			ax = A_RX
