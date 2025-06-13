@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbyhg2xhu1lou" path="res://scenes/enemy_1.tscn" id="5_04qyp"]
 [ext_resource type="PackedScene" uid="uid://ca01k6uxgbvy1" path="res://scenes/enemy_2.tscn" id="8_hh0fu"]
 [ext_resource type="PackedScene" uid="uid://c4imatpw8tcn6" path="res://scenes/mini_boss.tscn" id="9_hsdmi"]
-[ext_resource type="PackedScene" path="res://scenes/enemy_5.tscn" id="9_ifa78"]
+[ext_resource type="PackedScene" uid="uid://dvpxs8jfv2i6v" path="res://scenes/enemy_5.tscn" id="9_ifa78"]
 [ext_resource type="PackedScene" uid="uid://ll0y5il8obvu" path="res://scenes/enemy_3.tscn" id="10_dubn7"]
 [ext_resource type="PackedScene" uid="uid://c88wfi070rvt1" path="res://scenes/enemy_6.tscn" id="10_xtx0q"]
 [ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_f6ptj"]
