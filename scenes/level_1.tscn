@@ -1,0 +1,67 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgy6jxdiwbjpn"]
+
+[ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_2aecg"]
+[ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_6dial"]
+[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_7nomh"]
+[ext_resource type="PackedScene" uid="uid://dbyhg2xhu1lou" path="res://scenes/enemy_1.tscn" id="4_1s4pk"]
+[ext_resource type="PackedScene" uid="uid://ca01k6uxgbvy1" path="res://scenes/enemy_2.tscn" id="5_x2xxo"]
+[ext_resource type="PackedScene" uid="uid://ll0y5il8obvu" path="res://scenes/enemy_3.tscn" id="6_2cbcq"]
+[ext_resource type="PackedScene" uid="uid://dad3l6c6yroig" path="res://scenes/enemy_4.tscn" id="7_isj1j"]
+[ext_resource type="PackedScene" uid="uid://dvpxs8jfv2i6v" path="res://scenes/enemy_5.tscn" id="8_so66j"]
+[ext_resource type="PackedScene" uid="uid://c88wfi070rvt1" path="res://scenes/enemy_6.tscn" id="9_tr1x6"]
+[ext_resource type="PackedScene" uid="uid://c4imatpw8tcn6" path="res://scenes/mini_boss.tscn" id="10_d5akn"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="11_wbtxt"]
+[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_x2fux"]
+[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="13_s7g0b"]
+[ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="14_mmfjm"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_2aecg")]
+
+[node name="Airplane" parent="." instance=ExtResource("2_6dial")]
+position = Vector2(317, 857)
+script = ExtResource("3_7nomh")
+
+[node name="Enemy1" parent="." instance=ExtResource("4_1s4pk")]
+position = Vector2(-1, -1)
+
+[node name="Enemy 2" parent="." instance=ExtResource("5_x2xxo")]
+
+[node name="Enemy 3" parent="." instance=ExtResource("6_2cbcq")]
+
+[node name="Enemy 4" parent="." instance=ExtResource("7_isj1j")]
+
+[node name="Enemy 5" parent="." instance=ExtResource("8_so66j")]
+
+[node name="Enemy 6" parent="." instance=ExtResource("9_tr1x6")]
+
+[node name="MiniBoss" parent="." instance=ExtResource("10_d5akn")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("11_wbtxt")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("12_x2fux")
+
+[node name="Life" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.028
+anchor_right = 0.067
+anchor_bottom = 0.04
+offset_left = 5.0
+offset_top = 7.328
+offset_right = 4.8
+offset_bottom = 18.04
+theme_override_fonts/font = ExtResource("11_wbtxt")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("13_s7g0b")
+
+[node name="Healthbar" parent="." instance=ExtResource("14_mmfjm")]
+
+[connection signal="area_entered" from="Airplane" to="Airplane" method="_on_area_entered"]

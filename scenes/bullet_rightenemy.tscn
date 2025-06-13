@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuaa7gh51vnpm"]
+[gd_scene load_steps=9 format=3 uid="uid://u4acwyaaxcmx"]
 
 [ext_resource type="Script" uid="uid://cxm21u81c1xkn" path="res://scripts/bulletrightenemy.gd" id="1_37t7f"]
 [ext_resource type="Texture2D" uid="uid://bkk7xya131py" path="res://assets/enemy1/2z_R9t (1).png" id="2_784dc"]
