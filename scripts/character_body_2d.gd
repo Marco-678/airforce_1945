@@ -13,11 +13,14 @@ var module_y = 0
 var module_x = 0
 var deltaright = 0
 var deltaleft = 0
+var deltaright2 = 0
+var deltaleft2 = 0
 var r = 0
 var l = 0
 
 var score = 0
 var fireDelay = 0.1
+var giro = 0.5
 
 
 var plBullet = preload("res://scenes/bullet.tscn")
@@ -70,23 +73,38 @@ func _physics_process(_delta):
 		else:
 			$AnimatedSprite2D.play("left_fisso")
 		
-		
 	elif r == 1 and not Input.is_action_pressed("move_right"):
-		$AnimatedSprite2D.play("right_indietro")
-		r = 0
+		deltaright2 += _delta
+		deltaleft2 = 0
+		
+		if deltaright2 < 0.5:
+			$AnimatedSprite2D.play("right_indietro")
+		else:
+			r = 0
+			$AnimatedSprite2D.play("default")
+		
 		
 	elif l == 1 and not Input.is_action_pressed("move_left"):
-		$AnimatedSprite2D.play("left_indietro")
-		l = 0
+		deltaleft2 += _delta
+		deltaright2 = 0
+		
+		if deltaleft2 < 0.3:
+			$AnimatedSprite2D.play("left_indietro")
+		else:
+			l = 0
+			$AnimatedSprite2D.play("default")
 		
 		
-			
 	else:
 		deltaright = 0
 		deltaleft = 0
-		r = 0
+		deltaleft2 = 0
+		deltaright2 = 0
+		
 		l = 0
+		r = 0
 		$AnimatedSprite2D.play("default")
+		
 		if speed_x < -0.1:
 			ax = A_RX
 		elif speed_x > 0.1:
