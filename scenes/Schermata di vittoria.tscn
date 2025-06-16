@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://ckt4bpbh82fk5"]
+[gd_scene load_steps=3 format=3 uid="uid://ckt4bpbh82fk5"]
+
+[ext_resource type="Texture2D" uid="uid://cw4rherje0uf5" path="res://assets/Asset varie/pixel-art-8bit-you-win-260nw-2510384327.png" id="1_p6uxw"]
+[ext_resource type="Script" uid="uid://3aqjl2j43duf" path="res://scenes/victorybutton.gd" id="2_q2x64"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +10,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Pixel-art-8Bit-you-win-260Nw-2510384327" type="Sprite2D" parent="."]
+position = Vector2(284, 552)
+scale = Vector2(2.68197, 3.94286)
+texture = ExtResource("1_p6uxw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 36.0
+offset_right = 390.0
+offset_bottom = 182.0
+text = "Torna al menù principale"
+script = ExtResource("2_q2x64")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
