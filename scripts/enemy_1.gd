@@ -5,8 +5,8 @@ const EXPLOSION = preload("res://scenes/explosions.tscn")
 
 var plBulletenemy = preload("res://scenes/bullet_enemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
-var fireDelay = 0.6
-var fireDelay2 = 0.9
+var fireDelay = 0.8
+var fireDelay2 = 1
 var life = 5
 
 
