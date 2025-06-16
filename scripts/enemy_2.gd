@@ -11,11 +11,11 @@ var life = 5
 
 
 func _ready() -> void:
-	position.x = -500
+	position.x = 700
 
 func _physics_process(delta: float) -> void:
 	
-	position.x += 1
+	position.x -= 1
 	position.y = -pow(position.x,2)/80 + 5*position.x
 	
 func _process(delta: float) -> void:

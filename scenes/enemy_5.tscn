@@ -1,30 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvpxs8jfv2i6v"]
+[gd_scene load_steps=8 format=3 uid="uid://dvpxs8jfv2i6v"]
 
 [ext_resource type="Script" uid="uid://dvdqvux6n33bk" path="res://scripts/enemy_5.gd" id="1_m5fft"]
-[ext_resource type="Texture2D" uid="uid://b02d4hlbns4av" path="res://assets/enemy1.png" id="2_via2k"]
+[ext_resource type="Texture2D" uid="uid://d17y428dd7qcy" path="res://assets/enemy5/frame-01 (5).png" id="2_6yonu"]
+[ext_resource type="Texture2D" uid="uid://bslokbhlwip81" path="res://assets/enemy5/frame-02 (3).png" id="3_bh3pa"]
+[ext_resource type="Texture2D" uid="uid://bckevdtwa12dp" path="res://assets/enemy5/frame-03 (3).png" id="4_xwdeg"]
+[ext_resource type="Texture2D" uid="uid://bre5vawie2cso" path="res://assets/enemy5/frame-04 (3).png" id="5_t0chb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i8fq6"]
-radius = 41.0
-height = 96.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vohv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6yonu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bh3pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xwdeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t0chb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eju1i"]
+radius = 25.0
+height = 92.0
 
 [node name="Enemy 5" type="Area2D"]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_m5fft")
 
-[node name="Enemy1" type="Sprite2D" parent="."]
-position = Vector2(-4, 6)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_via2k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_i8fq6")
-
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
 
 [node name="DelayTime2" type="Timer" parent="."]
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.8147e-06, 1)
+rotation = 3.14159
+scale = Vector2(0.458292, 0.458292)
+sprite_frames = SubResource("SpriteFrames_6vohv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_eju1i")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
