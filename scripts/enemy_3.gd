@@ -7,7 +7,7 @@ var fireDelay = 0.3
 var life = 3
 
 func _ready() -> void:
-	position.x = -600
+	position.x = -300
 
 func _physics_process(delta: float) -> void:
 	
