@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bshn6a8vhkq3h"]
+
+[ext_resource type="Script" uid="uid://cjothqdho7g1b" path="res://scripts/enemy4_l2.gd" id="1_ex0rp"]
+[ext_resource type="Texture2D" uid="uid://dm8dpcnax3t2n" path="res://assets/enemy1/frame-01 (2).png" id="2_drive"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ofg1t"]
+radius = 60.0
+height = 120.0
+
+[node name="Enemy4_l2" type="Area2D"]
+script = ExtResource("1_ex0rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ofg1t")
+
+[node name="Frame-01(2)" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.614114, 0.599099)
+texture = ExtResource("2_drive")
+
+[node name="DelayTime" type="Timer" parent="."]
+one_shot = true
+
+[node name="DelayTime2" type="Timer" parent="."]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://deakc5crojdw2"]
+
+[ext_resource type="Script" uid="uid://dvc7mo3t4pc2p" path="res://scripts/Enemy1_l2.gd" id="1_1pkeq"]
+[ext_resource type="Texture2D" uid="uid://d07722v4vjptu" path="res://assets/F-15-Fighter-Jet.png" id="2_4ks81"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_41qqs"]
+radius = 38.0
+height = 138.0
+
+[node name="Enemy1_l2" type="Area2D"]
+script = ExtResource("1_1pkeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_41qqs")
+
+[node name="F-15-fighter-jet" type="Sprite2D" parent="."]
+position = Vector2(-5, 0)
+rotation = 3.14159
+scale = Vector2(0.234375, 0.263672)
+texture = ExtResource("2_4ks81")
+
+[node name="DelayTime" type="Timer" parent="."]
+one_shot = true
+
+[node name="DelayTime2" type="Timer" parent="."]
+one_shot = true
+
+[node name="DelayTime3" type="Timer" parent="."]
+one_shot = true
