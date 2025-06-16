@@ -36,6 +36,10 @@ func _process(delta: float) -> void:
 			get_tree().current_scene.add_child(bulletenemy2)
 			
 
+
+	
+
+
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
 	if life <= 1:
