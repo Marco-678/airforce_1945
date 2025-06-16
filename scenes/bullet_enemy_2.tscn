@@ -56,3 +56,5 @@ rotation = 4.71239
 scale = Vector2(0.216936, 0.216936)
 sprite_frames = SubResource("SpriteFrames_vo6nu")
 autoplay = "default"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -39,23 +39,34 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy3)
 		
 		
-	if DELTA > 8 and DELTA < 25 and $Timer.is_stopped():
+	if DELTA > 16 and DELTA < 28 and $Timer.is_stopped():
+		$Timer.start(delay2)
+		var enemy5 = pl5.instantiate()
+		enemy5.position = position
+		get_tree().current_scene.add_child(enemy5)
+		
+	if DELTA > 8 and DELTA < 28 and $Timer.is_stopped():
 		$Timer.start(delay2)
 		var enemy4 = pl4.instantiate()
 		enemy4.position = position
 		get_tree().current_scene.add_child(enemy4)
 		
-		
-	if DELTA > 25 and DELTA < 30 and $Timer.is_stopped():
+	if DELTA > 25 and DELTA < 32 and $Timer.is_stopped():
 		$Timer.start(delay)
 		var enemy1 = pl1.instantiate()
 		enemy1.position = position
 		get_tree().current_scene.add_child(enemy1)
 		
 		
-	if DELTA > 32 and DELTA < 45 and $Timer.is_stopped():
+	if DELTA > 38 and DELTA < 48 and $Timer.is_stopped():
 		print("sigma")
 		$Timer.start(delay)
 		var enemy2 = pl2.instantiate()
 		enemy2.position = position
 		get_tree().current_scene.add_child(enemy2)
+		
+	if DELTA > 34 and DELTA < 54 and $Timer.is_stopped():
+		$Timer.start(delay)
+		var enemy4 = pl4.instantiate()
+		enemy4.position = position
+		get_tree().current_scene.add_child(enemy4)
