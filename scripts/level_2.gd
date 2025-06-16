@@ -70,3 +70,8 @@ func _process(delta: float) -> void:
 		var enemy4 = pl4.instantiate()
 		enemy4.position = position
 		get_tree().current_scene.add_child(enemy4)
+		
+		
+	if Global.score >= 1000:
+		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
+		
