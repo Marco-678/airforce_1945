@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ysqe5ygjwqq"]
 
-[ext_resource type="Texture2D" uid="uid://l55wjlt4holn" path="res://assets/space.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/button.gd" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control"]
@@ -12,8 +12,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Space" type="Sprite2D" parent="."]
-position = Vector2(317, 383)
-texture = ExtResource("1_l6cm7")
+position = Vector2(299, 516)
+scale = Vector2(0.418403, 0.418403)
+texture = ExtResource("1_ekxnf")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://or3dw6ioxttp"]
 
 [ext_resource type="Script" uid="uid://bfil13jj8ct3o" path="res://scripts/parallax_background.gd" id="1_si5dj"]
-[ext_resource type="Texture2D" uid="uid://chw2hwiux0urw" path="res://assets/cielo gesse.png" id="2_yqcdc"]
+[ext_resource type="Texture2D" uid="uid://bn42mgjrlctht" path="res://assets/Firefly_pixel background sky clouds, only clouds and transparency 778806iiii.png" id="2_yqcdc"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_si5dj")
 
 [node name="SpaceLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(0, 1024)
+motion_mirroring = Vector2(0, 1200)
 
 [node name="Sprite2D" type="Sprite2D" parent="SpaceLayer"]
-position = Vector2(331, 492)
-scale = Vector2(1.76659, 2.21355)
+position = Vector2(303.514, 596.948)
+scale = Vector2(0.44512, 0.557738)
 texture = ExtResource("2_yqcdc")

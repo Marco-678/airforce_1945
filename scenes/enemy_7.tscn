@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://5d6w3htlgypt"]
+
+[ext_resource type="Texture2D" uid="uid://d17y428dd7qcy" path="res://assets/enemy5/frame-01 (5).png" id="1_2jbxu"]
+[ext_resource type="Script" uid="uid://chve3epartx0w" path="res://scripts/enemy_7.gd" id="1_64bn5"]
+[ext_resource type="Texture2D" uid="uid://bslokbhlwip81" path="res://assets/enemy5/frame-02 (3).png" id="2_64bn5"]
+[ext_resource type="Texture2D" uid="uid://bckevdtwa12dp" path="res://assets/enemy5/frame-03 (3).png" id="3_1cve1"]
+[ext_resource type="Texture2D" uid="uid://bre5vawie2cso" path="res://assets/enemy5/frame-04 (3).png" id="4_ef5vn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnx2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2jbxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_64bn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1cve1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ef5vn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v5pa0"]
+radius = 27.0
+height = 104.0
+
+[node name="Enemy 7" type="Area2D"]
+script = ExtResource("1_64bn5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_dnx2c")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_v5pa0")
+
+[node name="DelayTime" type="Timer" parent="."]
+
+[node name="DelayTime2" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
