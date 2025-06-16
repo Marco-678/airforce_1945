@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm21kusnqhp6a"
-path="res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724.jpg-d0ee38ba80e48361ddb4f6fcf7826d45.ctex"
+path="res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg-9fcfe51be9dd8371792dd24d81ed1047.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Levels/Firefly_pixel background for a ww2 shoot em up 519724.jpg"
-dest_files=["res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724.jpg-d0ee38ba80e48361ddb4f6fcf7826d45.ctex"]
+source_file="res://assets/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg"
+dest_files=["res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg-9fcfe51be9dd8371792dd24d81ed1047.ctex"]
 
 [params]
 
