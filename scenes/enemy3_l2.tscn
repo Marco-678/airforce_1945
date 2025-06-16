@@ -8,6 +8,8 @@ radius = 41.0
 height = 154.0
 
 [node name="Enemy3_l2" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_jjlfi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,3 +24,5 @@ texture = ExtResource("2_vrqqn")
 
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

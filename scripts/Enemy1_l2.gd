@@ -8,7 +8,7 @@ var plBulletenemy3 = preload("res://scenes/bullet_rightenemy.tscn")
 var fireDelay = 0.3
 var fireDelay2 = 0.3
 var fireDelay3 = 0.3
-var life = 12
+var life = 4
 
 
 func _ready() -> void:

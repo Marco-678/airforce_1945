@@ -8,6 +8,8 @@ radius = 38.0
 height = 138.0
 
 [node name="Enemy1_l2" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_1pkeq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,3 +30,5 @@ one_shot = true
 
 [node name="DelayTime3" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
