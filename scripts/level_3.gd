@@ -43,8 +43,7 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy2)
 		
 	if DELTA > 35 and DELTA < 41 and $Timer.is_stopped():
-		print("luce")
-		$Timer.start(delay2)
+		$Timer.start(delay3)
 		var enemy6 = pl6.instantiate()
 		enemy6.position = position
 		get_tree().current_scene.add_child(enemy6)

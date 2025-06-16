@@ -14,10 +14,6 @@ script = ExtResource("1_r15cd")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_a55e0")]
 
-[node name="Airplane" parent="." instance=ExtResource("2_3fumv")]
-position = Vector2(317, 857)
-script = ExtResource("3_3bt0o")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Score" type="Label" parent="CanvasLayer"]
@@ -43,6 +39,10 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("13_dd5ry")
 
 [node name="Healthbar" parent="." instance=ExtResource("14_jxm41")]
+
+[node name="Airplane" parent="." instance=ExtResource("2_3fumv")]
+position = Vector2(317, 857)
+script = ExtResource("3_3bt0o")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
