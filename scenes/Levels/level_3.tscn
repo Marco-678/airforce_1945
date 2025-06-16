@@ -1,42 +1,22 @@
-[gd_scene load_steps=15 format=3 uid="uid://bgkynbuqppovt"]
+[gd_scene load_steps=9 format=3 uid="uid://bgkynbuqppovt"]
 
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_a55e0"]
+[ext_resource type="Script" uid="uid://d2nfoot7arwcb" path="res://scripts/level_3.gd" id="1_r15cd"]
 [ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_3fumv"]
 [ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_3bt0o"]
-[ext_resource type="PackedScene" uid="uid://dbyhg2xhu1lou" path="res://scenes/enemy_1.tscn" id="4_46g8q"]
-[ext_resource type="PackedScene" uid="uid://ca01k6uxgbvy1" path="res://scenes/enemy_2.tscn" id="5_cu6c6"]
-[ext_resource type="PackedScene" uid="uid://ll0y5il8obvu" path="res://scenes/enemy_3.tscn" id="6_lt4p7"]
-[ext_resource type="PackedScene" uid="uid://dad3l6c6yroig" path="res://scenes/enemy_4.tscn" id="7_3o2ls"]
-[ext_resource type="PackedScene" uid="uid://dvpxs8jfv2i6v" path="res://scenes/enemy_5.tscn" id="8_pqvqn"]
-[ext_resource type="PackedScene" uid="uid://c88wfi070rvt1" path="res://scenes/enemy_6.tscn" id="9_2q2jy"]
-[ext_resource type="PackedScene" uid="uid://c4imatpw8tcn6" path="res://scenes/mini_boss.tscn" id="10_y6nao"]
 [ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="11_m0526"]
 [ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_xgqp6"]
 [ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="13_dd5ry"]
 [ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="14_jxm41"]
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_r15cd")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_a55e0")]
 
 [node name="Airplane" parent="." instance=ExtResource("2_3fumv")]
 position = Vector2(317, 857)
 script = ExtResource("3_3bt0o")
-
-[node name="Enemy1" parent="." instance=ExtResource("4_46g8q")]
-position = Vector2(-1, -1)
-
-[node name="Enemy 2" parent="." instance=ExtResource("5_cu6c6")]
-
-[node name="Enemy 3" parent="." instance=ExtResource("6_lt4p7")]
-
-[node name="Enemy 4" parent="." instance=ExtResource("7_3o2ls")]
-
-[node name="Enemy 5" parent="." instance=ExtResource("8_pqvqn")]
-
-[node name="Enemy 6" parent="." instance=ExtResource("9_2q2jy")]
-
-[node name="MiniBoss" parent="." instance=ExtResource("10_y6nao")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -63,5 +43,8 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("13_dd5ry")
 
 [node name="Healthbar" parent="." instance=ExtResource("14_jxm41")]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="area_entered" from="Airplane" to="Airplane" method="_on_area_entered"]

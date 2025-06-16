@@ -16,7 +16,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	
 	position.x -= 1
-	position.y = -pow(position.x,2)/80 + 5*position.x
+	position.y = position.x / 2
 	
 func _process(delta: float) -> void:
 	
@@ -33,7 +33,6 @@ func _process(delta: float) -> void:
 			bulletenemy2.position = position
 			get_tree().current_scene.add_child(bulletenemy2)
 			
-
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
 	if life <= 1:

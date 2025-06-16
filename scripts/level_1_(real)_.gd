@@ -23,14 +23,14 @@ func _process(delta: float) -> void:
 		enemy1.position = position
 		get_tree().current_scene.add_child(enemy1)
 
-	if DELTA < 14 and $Timer.is_stopped():
+	if DELTA < 20 and $Timer.is_stopped():
 		$Timer.start(delay)
 		var enemy3 = pl3.instantiate()
 		enemy3.position = position
 		get_tree().current_scene.add_child(enemy3)
 		
 
-	if DELTA > 1 and DELTA < 22 and $Timer.is_stopped():
+	if DELTA > 1 and DELTA < 30 and $Timer.is_stopped():
 		$Timer.start(delay2)
 		var enemy5 = pl5.instantiate()
 		enemy5.position = position

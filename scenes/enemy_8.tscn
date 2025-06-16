@@ -32,6 +32,7 @@ height = 110.0
 
 [node name="Enemy 8" type="Area2D"]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_s5hgu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -48,3 +49,5 @@ one_shot = true
 
 [node name="DelayTime2" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
