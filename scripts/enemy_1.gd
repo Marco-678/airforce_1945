@@ -5,13 +5,13 @@ const EXPLOSION = preload("res://scenes/explosions.tscn")
 
 var plBulletenemy = preload("res://scenes/bullet_enemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
-var fireDelay = 0.3
-var fireDelay2 = 0.5
+var fireDelay = 0.6
+var fireDelay2 = 0.9
 var life = 5
 
 
 func _ready() -> void:
-	position.x = -200
+	position.x = -300
 
 func _physics_process(delta: float) -> void:
 	

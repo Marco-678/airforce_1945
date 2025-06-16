@@ -5,8 +5,8 @@ const EXPLOSION = preload("res://scenes/explosions.tscn")
 
 var plBulletenemy = preload("res://scenes/bullet_enemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
-var fireDelay = 0.6
-var fireDelay2 = 0.9
+var fireDelay = 0.3
+var fireDelay2 = 0.5
 var life = 5
 
 
@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		bulletenemy2.position = position
 		get_tree().current_scene.add_child(bulletenemy2)
 		
-		
+
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
 	if life <= 1:
@@ -40,4 +40,3 @@ func _on_area_entered(area: Area2D) -> void:
 		explosion.global_position = global_position
 		get_tree().current_scene.add_child(explosion)
 		queue_free()
-		

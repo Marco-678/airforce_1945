@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://2hn8mdash7gv"]
+[gd_scene load_steps=9 format=3 uid="uid://2hn8mdash7gv"]
+
+[ext_resource type="Script" uid="uid://d1lno67avta0h" path="res://scripts/level_1_(real)_.gd" id="1_m7njv"]
+[ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_yhttu"]
+[ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_i3n8l"]
+[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_c8c7m"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="11_2vtfd"]
+[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_m7njv"]
+[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="13_h8kfn"]
+[ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="14_prjqb"]
 
 [node name="Level 1" type="Node2D"]
+script = ExtResource("1_m7njv")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_yhttu")]
+
+[node name="Airplane" parent="." instance=ExtResource("2_i3n8l")]
+position = Vector2(317, 857)
+script = ExtResource("3_c8c7m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("11_2vtfd")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("12_m7njv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Life" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.028
+anchor_right = 0.067
+anchor_bottom = 0.04
+offset_left = 5.0
+offset_top = 7.328
+offset_right = 4.8
+offset_bottom = 18.04
+theme_override_fonts/font = ExtResource("11_2vtfd")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("13_h8kfn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Healthbar" parent="." instance=ExtResource("14_prjqb")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="Airplane" to="Airplane" method="_on_area_entered"]
