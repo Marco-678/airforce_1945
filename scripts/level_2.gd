@@ -7,9 +7,11 @@ var delay2 = 3
 var enemy1
 var enemy3
 var enemy4
+var enemy6
 const pl = preload("res://scenes/enemy_1.tscn")
 const pl3 = preload("res://scenes/enemy_3.tscn")
 const pl4 = preload("res://scenes/enemy_5.tscn")
+const pl6 = preload("res://scenes/enemy_6.tscn")
 
 
 
@@ -42,3 +44,11 @@ func _process(delta: float) -> void:
 		var enemy1 = pl.instantiate()
 		enemy1.position = position
 		get_tree().current_scene.add_child(enemy1)
+		
+		
+	if DELTA > 32 and DELTA < 45 and $Timer.is_stopped():
+		print("sigma")
+		$Timer.start(delay)
+		var enemy6 = pl6.instantiate()
+		enemy6.position = position
+		get_tree().current_scene.add_child(enemy6)
