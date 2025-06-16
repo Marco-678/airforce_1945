@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://cy6dr6rtucuxr"]
+[gd_scene load_steps=9 format=3 uid="uid://by0fv6i8javp"]
 
-[node name="Level2" type="Node2D"]
+[ext_resource type="Script" uid="uid://r00o86ekw4pu" path="res://scripts/level_2.gd" id="1_ne2mo"]
+[ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_pbc48"]
+[ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_eqxsl"]
+[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_b4j7a"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="5_ne2mo"]
+[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="6_6cvei"]
+[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="7_que50"]
+[ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="8_hey2k"]
+
+[node name="Level 2" type="Node2D"]
+script = ExtResource("1_ne2mo")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_pbc48")]
+
+[node name="Airplane" parent="." instance=ExtResource("2_eqxsl")]
+position = Vector2(317, 857)
+script = ExtResource("3_b4j7a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 43.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("5_ne2mo")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("6_6cvei")
+metadata/_edit_use_anchors_ = true
+
+[node name="Life" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.028
+anchor_right = 0.067
+anchor_bottom = 0.04
+offset_left = 5.0
+offset_top = 7.328
+offset_right = 4.8
+offset_bottom = 18.04
+theme_override_fonts/font = ExtResource("5_ne2mo")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("7_que50")
+
+[node name="Healthbar" parent="." instance=ExtResource("8_hey2k")]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="Airplane" to="Airplane" method="_on_area_entered"]
