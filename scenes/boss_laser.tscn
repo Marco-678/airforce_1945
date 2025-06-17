@@ -1,0 +1,75 @@
+[gd_scene load_steps=16 format=3 uid="uid://bi7lk3dj5iu82"]
+
+[ext_resource type="Script" uid="uid://c8sjcnuwjf5t8" path="res://scripts/Boss/boss_laser.gd" id="1_py5vf"]
+[ext_resource type="Texture2D" uid="uid://cu7petcalsmuj" path="res://assets/Asset BOSS/frame_000.png" id="2_oxqnv"]
+[ext_resource type="Texture2D" uid="uid://dph6u5x7o7aaq" path="res://assets/Asset BOSS/frame_001.png" id="3_ahsk6"]
+[ext_resource type="Texture2D" uid="uid://cw460af10iqyr" path="res://assets/Asset BOSS/frame_002.png" id="4_1avik"]
+[ext_resource type="Texture2D" uid="uid://bcqk1j6pkenoe" path="res://assets/Asset BOSS/frame_003.png" id="5_nr26c"]
+[ext_resource type="Texture2D" uid="uid://cw5qlftu1el23" path="res://assets/Asset BOSS/frame_004.png" id="6_0wdfg"]
+[ext_resource type="Texture2D" uid="uid://cwvhhf04rr7vl" path="res://assets/Asset BOSS/frame_005.png" id="7_fuhv7"]
+[ext_resource type="Texture2D" uid="uid://c68ccwycb23j8" path="res://assets/Asset BOSS/frame_006.png" id="8_elyfa"]
+[ext_resource type="Texture2D" uid="uid://c85y00turdd0x" path="res://assets/Asset BOSS/frame_007.png" id="9_b5tb5"]
+[ext_resource type="Texture2D" uid="uid://cj8q2yb06rahh" path="res://assets/Asset BOSS/frame_008.png" id="10_lr75x"]
+[ext_resource type="Texture2D" uid="uid://c0d6q8bt2xsnm" path="res://assets/Asset BOSS/frame_009.png" id="11_7uc5k"]
+[ext_resource type="Texture2D" uid="uid://b5vb27cym5xor" path="res://assets/Asset BOSS/frame_010.png" id="12_a3x6b"]
+[ext_resource type="Texture2D" uid="uid://byofa4jggct1r" path="res://assets/Asset BOSS/frame_011.png" id="13_e0r6s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_avnc3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oxqnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ahsk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1avik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nr26c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0wdfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fuhv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_elyfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b5tb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lr75x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7uc5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a3x6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e0r6s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beifm"]
+size = Vector2(69, 258)
+
+[node name="BossLaser" type="Area2D"]
+script = ExtResource("1_py5vf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_avnc3")
+autoplay = "default"
+frame_progress = 0.997348
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 29)
+shape = SubResource("RectangleShape2D_beifm")
