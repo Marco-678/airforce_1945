@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://basucj36cfmlk"]
+
+[ext_resource type="Script" uid="uid://beqh7sgdajwcu" path="res://scripts/Boss/boss_supporter_right.gd" id="1_fcqba"]
+[ext_resource type="Texture2D" uid="uid://cate7pawij0ll" path="res://assets/Asset varie/miniboss.png" id="1_u4ju1"]
+
+[node name="BossSupporterRight" type="Area2D"]
+script = ExtResource("1_fcqba")
+
+[node name="Miniboss" type="Sprite2D" parent="."]
+texture = ExtResource("1_u4ju1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, 96, 5, 82, 20, 76, 6, 71, 11, 61, 14, -13, 24, -11, 31, -25, 38, -21, 56, -72, 66, -59, 64, -111, -69, -102, -70, -64, -58, -74, -41, -26, -33, -26, -27, -10, -18, -37, -16, 54, -8, 71, -26, 75)
+
+[node name="OpLaserDelay" type="Timer" parent="."]
+one_shot = true

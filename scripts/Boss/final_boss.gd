@@ -11,8 +11,9 @@ var plBulletenemy3 = preload("res://scenes/bullet_rightenemy.tscn")
 var fireDelay = 0.3
 var fireDelay2 = 0.3
 var fireDelay3 = 0.3
-var life = 30
-var LaserDelay = 2
+var life = 80
+var LaserDelay = 3
+var posizione = 0
 
 func _ready() -> void:
 
@@ -20,13 +21,24 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if position.x >= -100 and position.x <= 400:
+	if position.x >= -100 and position.x <= 400 and posizione == 0:
 		position.x += 1
 		position.y = pow(position.x + 100, 2)/600
 		
-	if position.x > 400 and position.x <= 595:
-		position.x += 1
+	if position.x > 400 and position.x < 600 and posizione == 0:
+		position.x += 0.5
 		position.y = pow(position.x -900, 2)/600
+		
+		
+	if position.x == 600 and position.y == 150:
+		print("sigma")
+		posizione = 1
+		position.x -= 0.7
+		position.y = (position.x + 2400)/12
+	
+	if position.x > -150 and position.x < 600 and posizione == 1:
+		position.x -= 0.8
+		position.y = (position.x + 2400)/12
 	
 	
 func _process(delta: float) -> void:
