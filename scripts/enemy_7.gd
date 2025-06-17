@@ -9,18 +9,24 @@ var fireDelay = 0.3
 var fireDelay2 = 0.5
 var life = 5
 
+var rng = RandomNumberGenerator.new()
+var rand = rng.randf_range(0.1,2)
+
 
 func _ready() -> void:
+	print(rand)
 	position.x = 700
 
 func _physics_process(delta: float) -> void:
 	
 	position.x -= 1
-	position.y = position.x / 2
+	position.y = rand * position.x
+	
 	
 func _process(delta: float) -> void:
 	
 	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 900:
+		
 		if $DelayTime.is_stopped():
 			$DelayTime.start(fireDelay)
 			var bulletenemy = plBulletenemy.instantiate()

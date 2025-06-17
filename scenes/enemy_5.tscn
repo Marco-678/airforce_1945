@@ -46,6 +46,7 @@ position = Vector2(3.8147e-06, 1)
 rotation = 3.14159
 scale = Vector2(0.458292, 0.458292)
 sprite_frames = SubResource("SpriteFrames_6vohv")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
