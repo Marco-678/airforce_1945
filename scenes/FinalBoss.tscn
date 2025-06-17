@@ -18,14 +18,14 @@ position = Vector2(1, -1)
 rotation = -0.00561606
 polygon = PackedVector2Array(-118, -65, -120, -85, -82, -80, -75, -101, -59, -99, -55, -81, 51, -79, 57, -99, 74, -97, 78, -81, 117, -83, 120, -65, 80, -44, 79, -22, 56, -5, 31, 13, 32, 50, 5, 118, -7, 115, -34, 51, -32, 9, -55, -12, -61, -6, -77, -13, -82, -42)
 
-[node name="TimeDelay" type="Timer" parent="."]
+[node name="DelayTime" type="Timer" parent="."]
 one_shot = true
 
-[node name="TimeDelay2" type="Timer" parent="."]
+[node name="DelayTime2" type="Timer" parent="."]
 one_shot = true
 
-[node name="TimeDelay3" type="Timer" parent="."]
+[node name="DelayTime3" type="Timer" parent="."]
 one_shot = true
 
-[node name="TimeDelayLaser" type="Timer" parent="."]
+[node name="DelayTimeLaser" type="Timer" parent="."]
 one_shot = true
