@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1ysqe5ygjwqq"]
+[gd_scene load_steps=7 format=3 uid="uid://b1ysqe5ygjwqq"]
 
 [ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/Buttons/button.gd" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://cvf0y8dttqm0d" path="res://assets/buttons/1000043445 (1) pressed.png" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dgfp4mhnrsmix" path="res://assets/buttons/1000043445 (1).png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dug8ahy8wfr5r" path="res://assets/buttons/1000043445 (1) hover.png" id="4_rtw2f"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="4_wu84c"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -16,13 +20,29 @@ position = Vector2(299, 516)
 scale = Vector2(0.418403, 0.418403)
 texture = ExtResource("1_ekxnf")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 199.0
-offset_top = 403.0
-offset_right = 465.0
-offset_bottom = 623.0
-text = "START"
+offset_left = 197.0
+offset_top = 741.0
+offset_right = 1221.0
+offset_bottom = 1765.0
+scale = Vector2(0.2, 0.2)
+tooltip_text = "
+"
+texture_normal = ExtResource("3_bqqt6")
+texture_pressed = ExtResource("4_rtw2f")
+texture_hover = ExtResource("3_8ln24")
 script = ExtResource("2_ekxnf")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 455.0
+offset_right = 733.0
+offset_bottom = 705.0
+theme_override_fonts/font = ExtResource("4_wu84c")
+theme_override_font_sizes/font_size = 100
+text = "START
+"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

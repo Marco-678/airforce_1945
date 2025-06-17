@@ -14,6 +14,10 @@ const pl6 = preload("res://scenes/enemy_6.tscn")
 const pl8 = preload("res://scenes/enemy_8.tscn")
 const pl51 = preload("res://scenes/enemy5_l2.tscn")
 const MINIBOSS = preload("res://scenes/mini_boss.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
+const GAMEOVER = preload("res://scenes/game_over.tscn")
+var deltafine
+
 
 func _process(delta: float) -> void:
 	
@@ -64,5 +68,16 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy5)
 		
 	if Global.score >= 1240:
-		print("tttttt")
-		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
+		deltafine += delta
+		var victory = VICTORY.instantiate()
+		get_tree().current_scene.add_child(victory)
+		Global.score = 0
+		Global.life = 25
+		
+	if Global.life <= 0:
+			deltafine += delta
+			if deltafine > 1:
+				var gameover = GAMEOVER.instantiate()
+				get_tree().current_scene.add_child(gameover)
+				Global.score = 0
+				Global.life = 25

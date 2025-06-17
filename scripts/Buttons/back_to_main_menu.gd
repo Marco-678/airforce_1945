@@ -1,5 +1,4 @@
-extends Button
-
+extends TextureButton
 
 
 

@@ -1,6 +1,7 @@
 extends Node2D
 
 var DELTA = 0
+var deltafine = 0
 var delay = 2
 var delay2 = 3
 var delay3 = 4
@@ -9,7 +10,8 @@ const pl3 = preload("res://scenes/enemy_3.tscn")
 const pl5 = preload("res://scenes/enemy_5.tscn")
 const pl2 = preload("res://scenes/enemy_2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
-
+const GAMEOVER = preload("res://scenes/game_over.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
 
 
 
@@ -64,7 +66,17 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy1)
 		
 	if Global.score >= 560:
-		print("log")
-		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
-		Global.score = 0
-		Global.life = 25
+		deltafine += delta
+		if deltafine > 1:
+			var victory = VICTORY.instantiate()
+			get_tree().current_scene.add_child(victory)
+			Global.score = 0
+			Global.life = 25
+	
+	if Global.life <= 0:
+		deltafine += delta
+		if deltafine > 1:
+			var gameover = GAMEOVER.instantiate()
+			get_tree().current_scene.add_child(gameover)
+			Global.score = 0
+			Global.life = 25

@@ -15,6 +15,10 @@ const pl31 = preload("res://scenes/enemy3_l2.tscn")
 const pl11 = preload("res://scenes/enemy1_l2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
 const pl41 = preload("res://scenes/enemy4_l2.tscn")
+const GAMEOVER = preload("res://scenes/game_over.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
+
+var deltafine = 0
 
 func _process(delta: float) -> void:
 	
@@ -58,3 +62,18 @@ func _process(delta: float) -> void:
 		var enemy41 = pl41.instantiate()
 		enemy41.position = position
 		get_tree().current_scene.add_child(enemy41)
+		
+	if Global.life <= 0:
+			deltafine += delta
+			if deltafine > 1:
+				var gameover = GAMEOVER.instantiate()
+				get_tree().current_scene.add_child(gameover)
+				Global.score = 0
+				Global.life = 25
+				
+	if Global.score >= 12400:
+		deltafine += delta
+		var victory = VICTORY.instantiate()
+		get_tree().current_scene.add_child(victory)
+		Global.score = 0
+		Global.life = 25

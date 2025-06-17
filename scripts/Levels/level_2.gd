@@ -14,6 +14,10 @@ const pl2 = preload("res://scenes/enemy2_l2.tscn")
 const pl3 = preload("res://scenes/enemy3_l2.tscn")
 const pl4 = preload("res://scenes/enemy4_l2.tscn")
 const pl5 = preload("res://scenes/enemy5_l2.tscn")
+const GAMEOVER = preload("res://scenes/game_over.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
+
+var deltafine = 0
 
 
 func _process(delta: float) -> void:
@@ -72,8 +76,17 @@ func _process(delta: float) -> void:
 		
 		
 	if Global.score >= 960:
-		print("log")
-		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
+		deltafine += delta
+		var victory = VICTORY.instantiate()
+		get_tree().current_scene.add_child(victory)
 		Global.score = 0
 		Global.life = 25
+	
+	if Global.life <= 0:
+			deltafine += delta
+			if deltafine > 1:
+				var gameover = GAMEOVER.instantiate()
+				get_tree().current_scene.add_child(gameover)
+				Global.score = 0
+				Global.life = 25
 		

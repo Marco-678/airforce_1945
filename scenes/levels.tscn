@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://x0y5dyodhnx8"]
+[gd_scene load_steps=12 format=3 uid="uid://x0y5dyodhnx8"]
 
 [ext_resource type="Script" uid="uid://bjdwpwudx6e7p" path="res://scripts/Buttons/buttonlevel_1.gd" id="1_5ekxl"]
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_jj4e6"]
+[ext_resource type="Texture2D" uid="uid://dgfp4mhnrsmix" path="res://assets/buttons/1000043445 (1).png" id="2_1jewu"]
 [ext_resource type="Script" uid="uid://b1htxwa2ff8u4" path="res://scripts/Buttons/buttonlevel_2.gd" id="2_ly2og"]
+[ext_resource type="Texture2D" uid="uid://dug8ahy8wfr5r" path="res://assets/buttons/1000043445 (1) hover.png" id="3_ibiju"]
 [ext_resource type="Script" uid="uid://b3hooyr46r02" path="res://scripts/Buttons/buttonlevel_3.gd" id="3_jj4e6"]
+[ext_resource type="Texture2D" uid="uid://cvf0y8dttqm0d" path="res://assets/buttons/1000043445 (1) pressed.png" id="4_00hpi"]
 [ext_resource type="Script" uid="uid://bv6imkwm1e1tg" path="res://scripts/Buttons/buttonlevel_4.gd" id="4_ly2og"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="6_6g56m"]
+[ext_resource type="Texture2D" uid="uid://bxscsg6inm536" path="res://assets/buttons/Left_Arrow_Filled-512.webp" id="9_ibiju"]
+[ext_resource type="Script" uid="uid://d0ganmitb1uhy" path="res://scripts/Buttons/back_to_main_menu.gd" id="10_00hpi"]
 
 [node name="Levels" type="Control"]
 layout_mode = 3
@@ -13,42 +20,111 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button1" type="Button" parent="."]
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(299, 516)
+scale = Vector2(0.418403, 0.418403)
+texture = ExtResource("1_jj4e6")
+
+[node name="Button1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 171.0
-offset_right = 375.0
-offset_bottom = 246.0
-text = "LEVEL 1"
+offset_left = 197.0
+offset_top = 163.0
+offset_right = 1221.0
+offset_bottom = 1187.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_1jewu")
+texture_pressed = ExtResource("3_ibiju")
+texture_hover = ExtResource("4_00hpi")
 script = ExtResource("1_5ekxl")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Label" type="Label" parent="Button1"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 272.0
-offset_right = 375.0
-offset_bottom = 347.0
-text = "LEVEL 2"
+offset_left = 260.0
+offset_top = 450.0
+offset_right = 836.0
+offset_bottom = 551.0
+theme_override_fonts/font = ExtResource("6_6g56m")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL 1"
+
+[node name="Button2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 355.0
+offset_right = 1221.0
+offset_bottom = 1379.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_1jewu")
+texture_pressed = ExtResource("3_ibiju")
+texture_hover = ExtResource("4_00hpi")
 script = ExtResource("2_ly2og")
 
-[node name="Button3" type="Button" parent="."]
+[node name="Label2" type="Label" parent="Button2"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 373.0
-offset_right = 375.0
-offset_bottom = 448.0
-text = "LEVEL 3"
+offset_left = 260.0
+offset_top = 465.0
+offset_right = 836.0
+offset_bottom = 566.0
+theme_override_fonts/font = ExtResource("6_6g56m")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL 2"
+
+[node name="Button3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 546.0
+offset_right = 1221.0
+offset_bottom = 1570.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_1jewu")
+texture_pressed = ExtResource("3_ibiju")
+texture_hover = ExtResource("4_00hpi")
 script = ExtResource("3_jj4e6")
 
-[node name="Button4" type="Button" parent="."]
+[node name="Label3" type="Label" parent="Button3"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 474.0
-offset_right = 375.0
-offset_bottom = 549.0
-text = "LEVEL 4"
+offset_left = 260.0
+offset_top = 455.0
+offset_right = 836.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("6_6g56m")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL 3"
+
+[node name="Button4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 741.0
+offset_right = 1221.0
+offset_bottom = 1765.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_1jewu")
+texture_pressed = ExtResource("3_ibiju")
+texture_hover = ExtResource("4_00hpi")
 script = ExtResource("4_ly2og")
 
+[node name="Label4" type="Label" parent="Button4"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 460.0
+offset_right = 836.0
+offset_bottom = 561.0
+theme_override_fonts/font = ExtResource("6_6g56m")
+theme_override_font_sizes/font_size = 90
+text = "LEVEL 4"
+
+[node name="BackToMainMenu" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 28.0
+offset_right = 523.0
+offset_bottom = 540.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("9_ibiju")
+script = ExtResource("10_00hpi")
+
 [connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button1" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_pressed"]
