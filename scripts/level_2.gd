@@ -59,7 +59,6 @@ func _process(delta: float) -> void:
 		
 		
 	if DELTA > 38 and DELTA < 48 and $Timer.is_stopped():
-		print("sigma")
 		$Timer.start(delay)
 		var enemy2 = pl2.instantiate()
 		enemy2.position = position

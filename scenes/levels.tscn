@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://x0y5dyodhnx8"]
+[gd_scene load_steps=5 format=3 uid="uid://x0y5dyodhnx8"]
 
-[ext_resource type="Script" uid="uid://d11opt8u3v04j" path="res://scripts/button_1.gd" id="1_hcnff"]
-[ext_resource type="Script" uid="uid://dgevhhwntvbls" path="res://scripts/button_2.gd" id="2_hk6qi"]
+[ext_resource type="Script" uid="uid://bjdwpwudx6e7p" path="res://scripts/buttonlevel_1.gd" id="1_5ekxl"]
+[ext_resource type="Script" uid="uid://b1htxwa2ff8u4" path="res://scripts/buttonlevel_2.gd" id="2_ly2og"]
+[ext_resource type="Script" uid="uid://b3hooyr46r02" path="res://scripts/buttonlevel_3.gd" id="3_jj4e6"]
+[ext_resource type="Script" uid="uid://bv6imkwm1e1tg" path="res://scripts/buttonlevel_4.gd" id="4_ly2og"]
 
 [node name="Levels" type="Control"]
 layout_mode = 3
@@ -13,35 +15,39 @@ grow_vertical = 2
 
 [node name="Button1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 143.0
-offset_right = 399.0
-offset_bottom = 254.0
+offset_left = 225.0
+offset_top = 171.0
+offset_right = 375.0
+offset_bottom = 246.0
 text = "LEVEL 1"
-script = ExtResource("1_hcnff")
+script = ExtResource("1_5ekxl")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 294.0
-offset_right = 387.0
-offset_bottom = 414.0
+offset_left = 225.0
+offset_top = 272.0
+offset_right = 375.0
+offset_bottom = 347.0
 text = "LEVEL 2"
-script = ExtResource("2_hk6qi")
+script = ExtResource("2_ly2og")
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 22.0
-offset_top = 32.0
-offset_right = 133.0
-offset_bottom = 40.0
+offset_left = 225.0
+offset_top = 373.0
+offset_right = 375.0
+offset_bottom = 448.0
+text = "LEVEL 3"
+script = ExtResource("3_jj4e6")
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0
-offset_left = -153.0
-offset_top = 72.0
-offset_right = 87.0
-offset_bottom = 208.0
+offset_left = 225.0
+offset_top = 474.0
+offset_right = 375.0
+offset_bottom = 549.0
+text = "LEVEL 4"
+script = ExtResource("4_ly2og")
 
 [connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button1" method="_on_button_2_pressed"]
