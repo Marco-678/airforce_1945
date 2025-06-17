@@ -16,7 +16,7 @@ const pl51 = preload("res://scenes/enemy5_l2.tscn")
 const MINIBOSS = preload("res://scenes/mini_boss.tscn")
 const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
 const GAMEOVER = preload("res://scenes/game_over.tscn")
-var deltafine
+var deltafine = 0
 
 
 func _process(delta: float) -> void:

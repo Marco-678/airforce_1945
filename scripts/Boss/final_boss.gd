@@ -68,6 +68,8 @@ func _process(delta: float) -> void:
 			var opbulletenemyMboss = plMiniBossLaser.instantiate()
 			opbulletenemyMboss.position = position
 			get_tree().current_scene.add_child(opbulletenemyMboss)
+			
+		
 
 
 
