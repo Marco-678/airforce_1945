@@ -28,4 +28,10 @@ one_shot = true
 [node name="DelayTimeLaser" type="Timer" parent="."]
 one_shot = true
 
+[node name="DelayTime2" type="Timer" parent="."]
+one_shot = true
+
+[node name="DelayTime3" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

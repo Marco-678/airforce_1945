@@ -22,24 +22,26 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	
-	if $DelayTime.is_stopped():
-		$DelayTime.start(fireDelay)
-		var bulletenemy = plBulletenemy.instantiate()
-		bulletenemy.position = position
-		get_tree().current_scene.add_child(bulletenemy)
-		
-	if $DelayTime2.is_stopped():
-		$DelayTime2.start(fireDelay2)
-		var bulletenemy2 = plBulletenemy2.instantiate()
-		bulletenemy2.position = position
-		get_tree().current_scene.add_child(bulletenemy2)
-		
-	if $DelayTime3.is_stopped():
-		$DelayTime3.start(fireDelay3)
-		var bulletenemy3 = plBulletenemy3.instantiate()
-		bulletenemy3.position = position
-		get_tree().current_scene.add_child(bulletenemy3)
-		
+	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 900:
+			
+		if $DelayTime.is_stopped():
+			$DelayTime.start(fireDelay)
+			var bulletenemy = plBulletenemy.instantiate()
+			bulletenemy.position = position
+			get_tree().current_scene.add_child(bulletenemy)
+			
+		if $DelayTime2.is_stopped():
+			$DelayTime2.start(fireDelay2)
+			var bulletenemy2 = plBulletenemy2.instantiate()
+			bulletenemy2.position = position
+			get_tree().current_scene.add_child(bulletenemy2)
+			
+		if $DelayTime3.is_stopped():
+			$DelayTime3.start(fireDelay3)
+			var bulletenemy3 = plBulletenemy3.instantiate()
+			bulletenemy3.position = position
+			get_tree().current_scene.add_child(bulletenemy3)
+			
 		
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1

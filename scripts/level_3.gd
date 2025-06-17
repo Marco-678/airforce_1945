@@ -13,6 +13,7 @@ const pl5 = preload("res://scenes/enemy_5.tscn")
 const pl6 = preload("res://scenes/enemy_6.tscn")
 const pl8 = preload("res://scenes/enemy_8.tscn")
 const pl51 = preload("res://scenes/enemy5_l2.tscn")
+const MINIBOSS = preload("res://scenes/mini_boss.tscn")
 
 func _process(delta: float) -> void:
 	
@@ -47,3 +48,21 @@ func _process(delta: float) -> void:
 		var enemy6 = pl6.instantiate()
 		enemy6.position = position
 		get_tree().current_scene.add_child(enemy6)
+	
+	if DELTA > 46 and DELTA < 48 and $Timer.is_stopped():
+		print("stable")
+		$Timer.start(delay4)
+		var miniboss = MINIBOSS.instantiate()
+		miniboss.position = position
+		get_tree().current_scene.add_child(miniboss)
+		
+	if DELTA > 49 and DELTA < 53 and $Timer.is_stopped():
+		print("afses")
+		$Timer.start(delay2)
+		var enemy5 = pl5.instantiate()
+		enemy5.position = position
+		get_tree().current_scene.add_child(enemy5)
+		
+	if Global.score >= 1150:
+		print("tttttt")
+		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")

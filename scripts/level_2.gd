@@ -74,4 +74,6 @@ func _process(delta: float) -> void:
 		
 	if Global.score >= 1000:
 		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
+		Global.score = 0
+		Global.life = 25
 		
