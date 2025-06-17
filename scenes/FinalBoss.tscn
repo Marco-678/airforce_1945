@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://q0qhh7bgqdfm"]
+
+[ext_resource type="Texture2D" uid="uid://c3xgppb5h4pdh" path="res://assets/Asset BOSS/codepen-spaceship-misc-military-aircraft-spacecraft-motorcycle-fairing-sprite-pixel-airplane-aircraft-thumbnail.png" id="1_2rbq7"]
+[ext_resource type="Script" uid="uid://j5qxsxgx6edw" path="res://scripts/final_boss.gd" id="1_vms02"]
+
+[node name="Boss" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_vms02")
+
+[node name="BossBody" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_2rbq7")
+
+[node name="Polygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1, -1)
+rotation = -0.00561606
+polygon = PackedVector2Array(-118, -65, -120, -85, -82, -80, -75, -101, -59, -99, -55, -81, 51, -79, 57, -99, 74, -97, 78, -81, 117, -83, 120, -65, 80, -44, 79, -22, 56, -5, 31, 13, 32, 50, 5, 118, -7, 115, -34, 51, -32, 9, -55, -12, -61, -6, -77, -13, -82, -42)
