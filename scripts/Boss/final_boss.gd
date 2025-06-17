@@ -20,11 +20,13 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	while position.x > -100 and position.x < 400:
+	if position.x >= -100 and position.x <= 400:
 		position.x += 1
 		position.y = pow(position.x + 100, 2)/600
 		
-		
+	if position.x > 400 and position.x <= 595:
+		position.x += 1
+		position.y = pow(position.x -900, 2)/600
 	
 	
 func _process(delta: float) -> void:

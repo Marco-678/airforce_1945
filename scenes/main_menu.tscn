@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ysqe5ygjwqq"]
 
-[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_ekxnf"]
-[ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/button.gd" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/Buttons/button.gd" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

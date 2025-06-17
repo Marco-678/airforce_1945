@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_2aecg"]
 [ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_6dial"]
-[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_7nomh"]
+[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/Player/character_body_2d.gd" id="3_7nomh"]
 [ext_resource type="PackedScene" uid="uid://dbyhg2xhu1lou" path="res://scenes/enemy_1.tscn" id="4_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://ca01k6uxgbvy1" path="res://scenes/enemy_2.tscn" id="5_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://ll0y5il8obvu" path="res://scenes/enemy_3.tscn" id="6_2cbcq"]
@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dvpxs8jfv2i6v" path="res://scenes/enemy_5.tscn" id="8_so66j"]
 [ext_resource type="PackedScene" uid="uid://c88wfi070rvt1" path="res://scenes/enemy_6.tscn" id="9_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://c4imatpw8tcn6" path="res://scenes/mini_boss.tscn" id="10_d5akn"]
-[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="11_wbtxt"]
-[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="12_x2fux"]
-[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="13_s7g0b"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="11_wbtxt"]
+[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/Player/score.gd" id="12_x2fux"]
+[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/Player/life.gd" id="13_s7g0b"]
 [ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="14_mmfjm"]
 
 [node name="level 1" type="Node2D"]

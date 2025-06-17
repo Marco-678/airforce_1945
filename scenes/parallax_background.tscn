@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://or3dw6ioxttp"]
 
-[ext_resource type="Script" uid="uid://bfil13jj8ct3o" path="res://scripts/parallax_background.gd" id="1_si5dj"]
-[ext_resource type="Texture2D" uid="uid://bn42mgjrlctht" path="res://assets/Firefly_pixel background sky clouds, only clouds and transparency 778806iiii.png" id="2_yqcdc"]
+[ext_resource type="Script" uid="uid://bfil13jj8ct3o" path="res://scripts/Misc/parallax_background.gd" id="1_si5dj"]
+[ext_resource type="Texture2D" uid="uid://bn42mgjrlctht" path="res://assets/Asset varie/Firefly_pixel background sky clouds, only clouds and transparency 778806iiii.png" id="2_yqcdc"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_si5dj")

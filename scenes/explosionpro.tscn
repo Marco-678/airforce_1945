@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dit205fx53lkt"]
 
-[ext_resource type="Texture2D" uid="uid://d2i67itncn0n6" path="res://assets/1000043060.png" id="1_soupm"]
-[ext_resource type="Script" uid="uid://dlvw6t7g5qhdq" path="res://scripts/explosionpro.gd" id="1_tmuor"]
+[ext_resource type="Texture2D" uid="uid://d2i67itncn0n6" path="res://assets/Asset varie/1000043060.png" id="1_soupm"]
+[ext_resource type="Script" uid="uid://dlvw6t7g5qhdq" path="res://scripts/Animations/explosionpro.gd" id="1_tmuor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmuor"]
 atlas = ExtResource("1_soupm")

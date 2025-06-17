@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkk7xya131py"
-path="res://.godot/imported/2z_R9t (1).png-f6712cf524adc5977a3a6db5535941b7.ctex"
+uid="uid://cjuhm7g85172l"
+path="res://.godot/imported/aerei colorati.png-1c1b188f6657c24bea45e923a6c0eb3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2z_R9t (1).png"
-dest_files=["res://.godot/imported/2z_R9t (1).png-f6712cf524adc5977a3a6db5535941b7.ctex"]
+source_file="res://assets/Asset varie/aerei colorati.png"
+dest_files=["res://.godot/imported/aerei colorati.png-1c1b188f6657c24bea45e923a6c0eb3d.ctex"]
 
 [params]
 

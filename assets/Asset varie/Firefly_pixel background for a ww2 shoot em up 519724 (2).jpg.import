@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsnyp8hda16lt"
-path="res://.godot/imported/left_indietro.png-426fe95a06b449871b2bdd4fb2051cae.ctex"
+uid="uid://cm21kusnqhp6a"
+path="res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg-344f7423ac11186f2d94deee4fb52eb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/left_indietro.png"
-dest_files=["res://.godot/imported/left_indietro.png-426fe95a06b449871b2bdd4fb2051cae.ctex"]
+source_file="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg"
+dest_files=["res://.godot/imported/Firefly_pixel background for a ww2 shoot em up 519724 (2).jpg-344f7423ac11186f2d94deee4fb52eb4.ctex"]
 
 [params]
 

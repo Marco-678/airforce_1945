@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu0bg5ro2hv88"
-path="res://.godot/imported/frame-24.png-3a9729698104e3ad03ef29d4141125ef.ctex"
+uid="uid://d07s16faynv45"
+path="res://.godot/imported/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png-0b5269ea8728649da92147d65f107b77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/frame-24.png"
-dest_files=["res://.godot/imported/frame-24.png-3a9729698104e3ad03ef29d4141125ef.ctex"]
+source_file="res://assets/Asset varie/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png"
+dest_files=["res://.godot/imported/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png-0b5269ea8728649da92147d65f107b77.ctex"]
 
 [params]
 
