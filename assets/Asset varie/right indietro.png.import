@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chw2hwiux0urw"
-path="res://.godot/imported/cielo gesse.png-b4e5a81c900fdb9834686e192e1be4fc.ctex"
+uid="uid://d2y0s8hrhx61v"
+path="res://.godot/imported/right indietro.png-e9b0366dd8abff269a162fbfad329270.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cielo gesse.png"
-dest_files=["res://.godot/imported/cielo gesse.png-b4e5a81c900fdb9834686e192e1be4fc.ctex"]
+source_file="res://assets/Asset varie/right indietro.png"
+dest_files=["res://.godot/imported/right indietro.png-e9b0366dd8abff269a162fbfad329270.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d07s16faynv45"
-path="res://.godot/imported/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png-88d44d76b96e99b49ee27649042e2dbd.ctex"
+uid="uid://d07722v4vjptu"
+path="res://.godot/imported/F-15-Fighter-Jet.png-f9933dc1d91af950f522d05a6453256f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png"
-dest_files=["res://.godot/imported/pixel-art-sky-with-fluffy-white-clouds-retro-style-vertical-illustration_1292377-21791.png-88d44d76b96e99b49ee27649042e2dbd.ctex"]
+source_file="res://assets/Asset varie/F-15-Fighter-Jet.png"
+dest_files=["res://.godot/imported/F-15-Fighter-Jet.png-f9933dc1d91af950f522d05a6453256f.ctex"]
 
 [params]
 

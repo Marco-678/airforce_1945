@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d07722v4vjptu"
-path="res://.godot/imported/F-15-Fighter-Jet.png-1cc25cc1be6984c2d9bf81776b5dcfeb.ctex"
+uid="uid://dvt60v3kcb6u1"
+path="res://.godot/imported/frame-23.png-b69cf47374ae0cc2bcfb99bf13fc9feb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/F-15-Fighter-Jet.png"
-dest_files=["res://.godot/imported/F-15-Fighter-Jet.png-1cc25cc1be6984c2d9bf81776b5dcfeb.ctex"]
+source_file="res://assets/Asset varie/frame-23.png"
+dest_files=["res://.godot/imported/frame-23.png-b69cf47374ae0cc2bcfb99bf13fc9feb.ctex"]
 
 [params]
 

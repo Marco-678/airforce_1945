@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://q0tp7xvqvfmc"]
 
-[ext_resource type="Script" uid="uid://drurwo0noqc7t" path="res://scripts/enemy2_l2.gd" id="1_ferkt"]
+[ext_resource type="Script" uid="uid://drurwo0noqc7t" path="res://scripts/Enemies/enemy2_l2.gd" id="1_ferkt"]
 [ext_resource type="Texture2D" uid="uid://dd3sbogwgwolf" path="res://assets/enemy2/frame-01 (3) (1).png" id="2_1bspd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py506"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwdtjf12cje6q"
-path="res://.godot/imported/frame-22.png-9aa3e60d2f7007f92d22b0f357b47c11.ctex"
+uid="uid://cate7pawij0ll"
+path="res://.godot/imported/miniboss.png-864580f9d45d8e1f059b071dc573192e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/frame-22.png"
-dest_files=["res://.godot/imported/frame-22.png-9aa3e60d2f7007f92d22b0f357b47c11.ctex"]
+source_file="res://assets/Asset varie/miniboss.png"
+dest_files=["res://.godot/imported/miniboss.png-864580f9d45d8e1f059b071dc573192e.ctex"]
 
 [params]
 

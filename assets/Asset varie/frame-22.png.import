@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdp4lshmbiri0"
-path="res://.godot/imported/Firefly_pixel background sky clouds, only clouds and transparency 778806.png-006ed6c0cd316ce9d93feee7bb49dee5.ctex"
+uid="uid://dwdtjf12cje6q"
+path="res://.godot/imported/frame-22.png-8302676d696b9cd63d09086b87962f35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Firefly_pixel background sky clouds, only clouds and transparency 778806.png"
-dest_files=["res://.godot/imported/Firefly_pixel background sky clouds, only clouds and transparency 778806.png-006ed6c0cd316ce9d93feee7bb49dee5.ctex"]
+source_file="res://assets/Asset varie/frame-22.png"
+dest_files=["res://.godot/imported/frame-22.png-8302676d696b9cd63d09086b87962f35.ctex"]
 
 [params]
 

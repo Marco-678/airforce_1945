@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://deakc5crojdw2"]
 
-[ext_resource type="Script" uid="uid://dvc7mo3t4pc2p" path="res://scripts/Enemy1_l2.gd" id="1_1pkeq"]
-[ext_resource type="Texture2D" uid="uid://d07722v4vjptu" path="res://assets/F-15-Fighter-Jet.png" id="2_4ks81"]
+[ext_resource type="Script" uid="uid://dvc7mo3t4pc2p" path="res://scripts/Enemies/Enemy1_l2.gd" id="1_1pkeq"]
+[ext_resource type="Texture2D" uid="uid://d07722v4vjptu" path="res://assets/Asset varie/F-15-Fighter-Jet.png" id="2_4ks81"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_41qqs"]
 radius = 38.0

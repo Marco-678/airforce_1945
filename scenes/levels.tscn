@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://x0y5dyodhnx8"]
 
-[ext_resource type="Script" uid="uid://bjdwpwudx6e7p" path="res://scripts/buttonlevel_1.gd" id="1_5ekxl"]
-[ext_resource type="Script" uid="uid://b1htxwa2ff8u4" path="res://scripts/buttonlevel_2.gd" id="2_ly2og"]
-[ext_resource type="Script" uid="uid://b3hooyr46r02" path="res://scripts/buttonlevel_3.gd" id="3_jj4e6"]
-[ext_resource type="Script" uid="uid://bv6imkwm1e1tg" path="res://scripts/buttonlevel_4.gd" id="4_ly2og"]
+[ext_resource type="Script" uid="uid://bjdwpwudx6e7p" path="res://scripts/Buttons/buttonlevel_1.gd" id="1_5ekxl"]
+[ext_resource type="Script" uid="uid://b1htxwa2ff8u4" path="res://scripts/Buttons/buttonlevel_2.gd" id="2_ly2og"]
+[ext_resource type="Script" uid="uid://b3hooyr46r02" path="res://scripts/Buttons/buttonlevel_3.gd" id="3_jj4e6"]
+[ext_resource type="Script" uid="uid://bv6imkwm1e1tg" path="res://scripts/Buttons/buttonlevel_4.gd" id="4_ly2og"]
 
 [node name="Levels" type="Control"]
 layout_mode = 3

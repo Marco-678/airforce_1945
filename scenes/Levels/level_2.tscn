@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://by0fv6i8javp"]
 
-[ext_resource type="Script" uid="uid://r00o86ekw4pu" path="res://scripts/level_2.gd" id="1_ne2mo"]
+[ext_resource type="Script" uid="uid://r00o86ekw4pu" path="res://scripts/Levels/level_2.gd" id="1_ne2mo"]
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_pbc48"]
 [ext_resource type="PackedScene" uid="uid://mb3mcxgxoi8h" path="res://scenes/airplane.tscn" id="2_eqxsl"]
-[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/character_body_2d.gd" id="3_b4j7a"]
-[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/PixelOperator8.ttf" id="5_ne2mo"]
-[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/score.gd" id="6_6cvei"]
-[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/life.gd" id="7_que50"]
+[ext_resource type="Script" uid="uid://bse3lmowg7dge" path="res://scripts/Player/character_body_2d.gd" id="3_b4j7a"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="5_ne2mo"]
+[ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/Player/score.gd" id="6_6cvei"]
+[ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/Player/life.gd" id="7_que50"]
 [ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="8_hey2k"]
 
 [node name="Level 2" type="Node2D"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjuhm7g85172l"
-path="res://.godot/imported/aerei colorati.png-b2c02b479562d8ab9e86364c474ee0a7.ctex"
+uid="uid://dgnffdrxsefwf"
+path="res://.godot/imported/pngtree-pixel-clouds-cloud-sky-blue-png-image_4971233.png-0b6aa6a8884953ea8a10ecae831a9cf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/aerei colorati.png"
-dest_files=["res://.godot/imported/aerei colorati.png-b2c02b479562d8ab9e86364c474ee0a7.ctex"]
+source_file="res://assets/Asset varie/pngtree-pixel-clouds-cloud-sky-blue-png-image_4971233.png"
+dest_files=["res://.godot/imported/pngtree-pixel-clouds-cloud-sky-blue-png-image_4971233.png-0b6aa6a8884953ea8a10ecae831a9cf2.ctex"]
 
 [params]
 
