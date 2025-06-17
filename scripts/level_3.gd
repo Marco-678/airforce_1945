@@ -63,6 +63,6 @@ func _process(delta: float) -> void:
 		enemy5.position = position
 		get_tree().current_scene.add_child(enemy5)
 		
-	if Global.score >= 1150:
+	if Global.score >= 1240:
 		print("tttttt")
 		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
