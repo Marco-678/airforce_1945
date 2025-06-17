@@ -36,9 +36,10 @@ func _process(delta: float) -> void:
 			
 
 func _on_area_entered(area: Area2D) -> void:
-	life -= 1
-	if life <= 1:
-		var explosion = EXPLOSION.instantiate()
-		explosion.global_position = global_position
-		get_tree().current_scene.add_child(explosion)
-		queue_free()
+	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 900:
+		life -= 1
+		if life <= 1:
+			var explosion = EXPLOSION.instantiate()
+			explosion.global_position = global_position
+			get_tree().current_scene.add_child(explosion)
+			queue_free()

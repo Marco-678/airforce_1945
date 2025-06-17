@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b1hf4i2dtwj66"]
 
-[ext_resource type="Script" path="res://scripts/laser_mini_boss.gd" id="1_2ci8a"]
+[ext_resource type="Script" uid="uid://8xoknmrbhgcx" path="res://scripts/laser_mini_boss.gd" id="1_2ci8a"]
 [ext_resource type="Texture2D" uid="uid://pn0evm7o4e52" path="res://assets/Asset miniboss/frame_000.webp" id="2_2ci8a"]
 [ext_resource type="Texture2D" uid="uid://cmqa2qfle1av3" path="res://assets/Asset miniboss/frame_001.webp" id="3_xkp8t"]
 [ext_resource type="Texture2D" uid="uid://dsiv02bcbdnea" path="res://assets/Asset miniboss/frame_002.webp" id="4_vysgd"]
