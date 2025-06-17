@@ -7,13 +7,18 @@ const plMiniBossLaser = preload("res://scenes/Laser_MiniBoss.tscn")
 var plBulletenemy = preload("res://scenes/bullet_leftenemy.tscn")
 var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
 var plBulletenemy3 = preload("res://scenes/bullet_rightenemy.tscn")
+const plBulletenemy_3 = preload("res://scenes/bullet_enemy_3.tscn")
 
+var delaygrosso = 2
+var fireDelay0 = 0.1
 var fireDelay = 0.3
 var fireDelay2 = 0.3
 var fireDelay3 = 0.3
 var life = 80
 var LaserDelay = 3
 var posizione = 0
+var DELTA = 0
+var i = 0
 
 func _ready() -> void:
 
@@ -43,6 +48,9 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	
+	DELTA += delta
+	i = int(DELTA)
+	
 	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 900:
 			
 		if $DelayTime.is_stopped():
@@ -51,17 +59,17 @@ func _process(delta: float) -> void:
 			bulletenemy.position = position
 			get_tree().current_scene.add_child(bulletenemy)
 			
-		if $DelayTime2.is_stopped():
-			$DelayTime2.start(fireDelay2)
-			var bulletenemy2 = plBulletenemy2.instantiate()
-			bulletenemy2.position = position
-			get_tree().current_scene.add_child(bulletenemy2)
-			
-		if $DelayTime3.is_stopped():
-			$DelayTime3.start(fireDelay3)
-			var bulletenemy3 = plBulletenemy3.instantiate()
-			bulletenemy3.position = position
-			get_tree().current_scene.add_child(bulletenemy3)
+#		if $DelayTime2.is_stopped():
+#			$DelayTime2.start(fireDelay2)
+#			var bulletenemy2 = plBulletenemy2.instantiate()
+#			bulletenemy2.position = position
+#			get_tree().current_scene.add_child(bulletenemy2)
+#			
+#		if $DelayTime3.is_stopped():
+#			$DelayTime3.start(fireDelay3)
+#			var bulletenemy3 = plBulletenemy3.instantiate()
+#			bulletenemy3.position = position
+#			get_tree().current_scene.add_child(bulletenemy3)
 			
 		if $DelayTimeLaser.is_stopped():
 			$DelayTimeLaser.start(LaserDelay)
@@ -69,8 +77,12 @@ func _process(delta: float) -> void:
 			opbulletenemyMboss.position = position
 			get_tree().current_scene.add_child(opbulletenemyMboss)
 			
-		
-
+		if float(i)/2 != int(i/2):
+			if $TimerSmall.is_stopped():
+				$TimerSmall.start(fireDelay0)
+				var bulletenemy0 = plBulletenemy_3.instantiate()
+				bulletenemy0.position = position
+				get_tree().current_scene.add_child(bulletenemy0)
 
 
 func _on_area_entered(area: Area2D) -> void:

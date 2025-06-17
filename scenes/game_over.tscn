@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bih080714smri" path="res://scripts/Buttons/main_menu.gd" id="9_8bugq"]
 
 [node name="GameOver" type="Control"]
-process_priority = 1
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

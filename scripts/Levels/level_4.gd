@@ -17,6 +17,7 @@ const pl4 = preload("res://scenes/enemy_4.tscn")
 const pl41 = preload("res://scenes/enemy4_l2.tscn")
 const GAMEOVER = preload("res://scenes/game_over.tscn")
 const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
+const BOSS = preload("res://scenes/FinalBoss.tscn")
 
 var deltafine = 0
 
@@ -62,6 +63,15 @@ func _process(delta: float) -> void:
 		var enemy41 = pl41.instantiate()
 		enemy41.position = position
 		get_tree().current_scene.add_child(enemy41)
+		
+	if DELTA > 55 and DELTA < 57 and $Timer.is_stopped():
+		$Timer.start(delay4)
+		var boss = BOSS.instantiate()
+		boss.position = position
+		get_tree().current_scene.add_child(boss)
+		print("boss")
+		
+		
 		
 	if Global.life <= 0:
 			deltafine += delta

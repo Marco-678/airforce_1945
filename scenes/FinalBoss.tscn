@@ -29,3 +29,9 @@ one_shot = true
 
 [node name="DelayTimeLaser" type="Timer" parent="."]
 one_shot = true
+
+[node name="TimerBig" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerSmall" type="Timer" parent="."]
+one_shot = true
