@@ -9,10 +9,12 @@ var delay4= 4
 const pl = preload("res://scenes/enemy_1.tscn")
 const pl2 = preload("res://scenes/enemy_2.tscn")
 const pl7 = preload("res://scenes/enemy_7.tscn")
+const pl8 = preload("res://scenes/enemy_8.tscn")
 const pl51 = preload("res://scenes/enemy5_l2.tscn")
 const pl31 = preload("res://scenes/enemy3_l2.tscn")
 const pl11 = preload("res://scenes/enemy1_l2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
+const pl41 = preload("res://scenes/enemy4_l2.tscn")
 
 func _process(delta: float) -> void:
 	
@@ -36,14 +38,23 @@ func _process(delta: float) -> void:
 		enemy11.position = position
 		get_tree().current_scene.add_child(enemy11)
 		
-		$Timer.start(delay2)
+		$Timer.start(delay3)
 		var enemy4 = pl4.instantiate()
 		enemy4.position = position
 		get_tree().current_scene.add_child(enemy4)
 		
 	if DELTA > 25 and DELTA < 30 and $Timer.is_stopped():
-		$Timer.start(delay)
+		$Timer.start(delay3)
 		var enemy2 = pl2.instantiate()
 		enemy2.position = position
 		get_tree().current_scene.add_child(enemy2)
 		
+	if DELTA > 38 and DELTA < 48 and $Timer.is_stopped():
+		$Timer.start(delay2)
+		var enemy8 = pl8.instantiate()
+		enemy8.position = position
+		get_tree().current_scene.add_child(enemy8)
+		
+		var enemy41 = pl41.instantiate()
+		enemy41.position = position
+		get_tree().current_scene.add_child(enemy41)
