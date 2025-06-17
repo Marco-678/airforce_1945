@@ -72,7 +72,8 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy4)
 		
 		
-	if Global.score >= 1000:
+	if Global.score >= 960:
+		print("log")
 		get_tree().change_scene_to_file("res://scenes/Schermata di vittoria.tscn")
 		Global.score = 0
 		Global.life = 25
