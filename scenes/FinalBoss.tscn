@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://q0qhh7bgqdfm"]
 
-[ext_resource type="Texture2D" uid="uid://c3xgppb5h4pdh" path="res://assets/Asset BOSS/codepen-spaceship-misc-military-aircraft-spacecraft-motorcycle-fairing-sprite-pixel-airplane-aircraft-thumbnail.png" id="1_2rbq7"]
+[ext_resource type="Texture2D" uid="uid://c3ing11qvud0x" path="res://assets/Asset BOSS/codepen-spaceship-misc-military-aircraft-spacecraft-motorcycle-fairing-sprite-pixel-airplane-aircraft-thumbnail.png" id="1_2rbq7"]
 [ext_resource type="Script" uid="uid://j5qxsxgx6edw" path="res://scripts/Boss/final_boss.gd" id="1_vms02"]
 
 [node name="Boss" type="Area2D"]
