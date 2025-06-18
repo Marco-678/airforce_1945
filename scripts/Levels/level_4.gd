@@ -102,7 +102,7 @@ func _process(delta: float) -> void:
 				Global.score = 0
 				Global.life = 25
 				
-	if Global.score >= 12400:
+	if Global.score >= 1980:
 		deltafine += delta
 		var victory = VICTORY.instantiate()
 		get_tree().current_scene.add_child(victory)
