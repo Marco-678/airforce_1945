@@ -44,6 +44,7 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("6_lpoy4")
 
 [node name="Healthbar" parent="." instance=ExtResource("7_p3qha")]
+z_index = 1
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
