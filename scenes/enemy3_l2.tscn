@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d17y428dd7qcy" path="res://assets/enemy5/frame-01 (5).png" id="2_vrqqn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qn326"]
-radius = 41.0
-height = 154.0
+radius = 44.0
+height = 204.0
 
 [node name="Enemy3_l2" type="Area2D"]
 collision_layer = 2
@@ -15,11 +15,12 @@ script = ExtResource("1_jjlfi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -5)
 rotation = 1.5708
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_qn326")
 
 [node name="Frame-01(5)" type="Sprite2D" parent="."]
 rotation = 3.14159
-scale = Vector2(0.771772, 0.816817)
+scale = Vector2(0.5, 0.529)
 texture = ExtResource("2_vrqqn")
 
 [node name="DelayTime" type="Timer" parent="."]
