@@ -23,6 +23,7 @@ const Enemy_Right = preload("res://scenes/boss_supporter_right.tscn")
 const Enemy_Left = preload("res://scenes/boss_supporter_left.tscn")
 
 var deltafine = 0
+var ceppo = 0
 
 func _process(delta: float) -> void:
 	
@@ -96,14 +97,16 @@ func _process(delta: float) -> void:
 		
 	if Global.life <= 0:
 			deltafine += delta
-			if deltafine > 1:
+			if deltafine > 1 and ceppo == 0:
 				var gameover = GAMEOVER.instantiate()
 				get_tree().current_scene.add_child(gameover)
-				
+				ceppo = 1
+				Global.level  = 4
 				
 	if Global.score >= 1970:
 		deltafine += delta
-		if deltafine > 1:
+		if deltafine > 1 and ceppo == 0:
 			var victory = VICTORY.instantiate()
 			get_tree().current_scene.add_child(victory)
-		
+			ceppo = 1
+			Global.level  = 4
