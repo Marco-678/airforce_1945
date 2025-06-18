@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cate7pawij0ll" path="res://assets/Asset varie/miniboss.png" id="1_u4ju1"]
 
 [node name="BossSupporterRight" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_fcqba")
 
 [node name="Miniboss" type="Sprite2D" parent="."]
