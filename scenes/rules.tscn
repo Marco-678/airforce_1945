@@ -49,6 +49,4 @@ scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_kpkwe")
 script = ExtResource("4_gro0m")
 
-[node name="Timer" type="Timer" parent="."]
-
 [connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_pressed"]
