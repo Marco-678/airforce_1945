@@ -40,6 +40,7 @@ text = "                 The Rules are very simple:
 	   Have fun!"
 
 [node name="BackToMainMenu" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 28.0
 offset_right = 523.0
@@ -47,5 +48,7 @@ offset_bottom = 540.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_kpkwe")
 script = ExtResource("4_gro0m")
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="pressed" from="BackToMainMenu" to="BackToMainMenu" method="_on_pressed"]
