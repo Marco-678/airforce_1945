@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu6dnl3i3dlne"]
+
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_0bpdh"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="2_2ckv8"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(299, 516)
+scale = Vector2(0.418403, 0.418403)
+texture = ExtResource("1_0bpdh")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 130.0
+offset_right = 438.0
+offset_bottom = 385.0
+theme_override_colors/font_color = Color(0.943867, 0.437326, 0, 1)
+theme_override_fonts/font = ExtResource("2_2ckv8")
+text = "Credits:
+
+
+- pikpng.com
+- pikbest.com
+- vectorstock.com
+- pngimg.com
+- bdragon1727.itch.io
+- pin.it/oY7K4yMWY
+- deviantart.com
+- artstation.com"
