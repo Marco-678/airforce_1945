@@ -25,3 +25,5 @@ script = ExtResource("1_8wl12")
 position = Vector2(93, 27)
 scale = Vector2(0.337437, 0.335581)
 texture = ExtResource("2_vjxg4")
+
+[node name="Timer" type="Timer" parent="."]
