@@ -5,6 +5,7 @@ var delay = 1
 var delay2 = 2
 var delay3 = 3
 var delay4= 4
+var LateralDelay = 6
 
 const pl = preload("res://scenes/enemy_1.tscn")
 const pl2 = preload("res://scenes/enemy_2.tscn")
@@ -18,6 +19,8 @@ const pl41 = preload("res://scenes/enemy4_l2.tscn")
 const GAMEOVER = preload("res://scenes/game_over.tscn")
 const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
 const BOSS = preload("res://scenes/FinalBoss.tscn")
+const Enemy_Right = preload("res://scenes/boss_supporter_right.tscn")
+const Enemy_Left = preload("res://scenes/boss_supporter_left.tscn")
 
 var deltafine = 0
 
@@ -70,6 +73,15 @@ func _process(delta: float) -> void:
 		boss.position = position
 		get_tree().current_scene.add_child(boss)
 		print("boss")
+	
+	if DELTA > 60 and DELTA <63 and $Timer.is_stopped():
+		$Timer.start(LateralDelay)
+		var Eleft = Enemy_Left.instantiate()
+		Eleft.position = position
+		get_tree().current_scene.add_child(Eleft)
+		var Eright = Enemy_Right.instantiate()
+		Eright.position = position
+		get_tree().current_scene.add_child(Eright)
 		
 		
 		
