@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1ysqe5ygjwqq"]
+[gd_scene load_steps=10 format=3 uid="uid://b1ysqe5ygjwqq"]
 
-[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_ekxnf"]
-[ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/Buttons/button.gd" id="2_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://cvf0y8dttqm0d" path="res://assets/buttons/1000043445 (1) pressed.png" id="3_8ln24"]
-[ext_resource type="Texture2D" uid="uid://dgfp4mhnrsmix" path="res://assets/buttons/1000043445 (1).png" id="3_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://dug8ahy8wfr5r" path="res://assets/buttons/1000043445 (1) hover.png" id="4_rtw2f"]
-[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="4_wu84c"]
-[ext_resource type="Script" uid="uid://drp21fd2j8h1a" path="res://scripts/Buttons/rules.gd" id="7_oa1go"]
-[ext_resource type="Texture2D" uid="uid://chcwa5kboh42p" path="res://assets/Asset varie/titolo.png" id="8_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://dgfp4mhnrsmix" path="res://assets/buttons/1000043445 (1).png" id="2_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://dug8ahy8wfr5r" path="res://assets/buttons/1000043445 (1) hover.png" id="3_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://cvf0y8dttqm0d" path="res://assets/buttons/1000043445 (1) pressed.png" id="4_flqon"]
+[ext_resource type="Script" uid="uid://2mw3id3h1xjl" path="res://scripts/Buttons/button.gd" id="5_rcqid"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="6_1ajci"]
+[ext_resource type="Script" uid="uid://drp21fd2j8h1a" path="res://scripts/Buttons/rules.gd" id="7_7b55j"]
+[ext_resource type="Script" uid="uid://bm2tll38mjlak" path="res://scripts/Buttons/credits.gd" id="8_5pajh"]
+[ext_resource type="Texture2D" uid="uid://chcwa5kboh42p" path="res://assets/Asset varie/titolo.png" id="9_j7ex8"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -20,107 +21,79 @@ grow_vertical = 2
 [node name="Space" type="Sprite2D" parent="."]
 position = Vector2(299, 516)
 scale = Vector2(0.418403, 0.418403)
-texture = ExtResource("1_ekxnf")
+texture = ExtResource("1_jk1qb")
 
-[node name="Label" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -306.0
-offset_top = 102.0
-offset_right = 302.0
-offset_bottom = 384.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.956863, 0.25098, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/paragraph_spacing = 5
-theme_override_constants/shadow_offset_x = 6
-theme_override_constants/shadow_offset_y = -6
-theme_override_constants/shadow_outline_size = 3
-theme_override_fonts/font = ExtResource("4_wu84c")
-theme_override_font_sizes/font_size = 90
-text = "AIRFORCE
-1943"
-horizontal_alignment = 1
-
-[node name="Button" type="TextureButton" parent="."]
+[node name="Start" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 750.0
-offset_right = 1109.0
-offset_bottom = 1774.0
+offset_left = 83.0
+offset_top = 751.0
+offset_right = 1107.0
+offset_bottom = 1775.0
 scale = Vector2(0.2, 0.2)
-tooltip_text = "
-"
-texture_normal = ExtResource("3_bqqt6")
-texture_pressed = ExtResource("4_rtw2f")
-texture_hover = ExtResource("3_8ln24")
-script = ExtResource("2_ekxnf")
+texture_normal = ExtResource("2_5dd4i")
+texture_pressed = ExtResource("3_lgwnu")
+texture_hover = ExtResource("4_flqon")
+script = ExtResource("5_rcqid")
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="Start"]
 layout_mode = 0
-offset_left = 295.0
-offset_top = 455.0
-offset_right = 733.0
-offset_bottom = 705.0
-theme_override_fonts/font = ExtResource("4_wu84c")
+offset_left = 285.0
+offset_top = 450.0
+offset_right = 790.0
+offset_bottom = 980.0
+theme_override_fonts/font = ExtResource("6_1ajci")
 theme_override_font_sizes/font_size = 100
-text = "START
-"
+text = "START"
 
 [node name="Rules" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 306.0
-offset_top = 750.0
-offset_right = 1330.0
-offset_bottom = 1774.0
+offset_left = 298.0
+offset_top = 751.0
+offset_right = 1322.0
+offset_bottom = 1775.0
 scale = Vector2(0.2, 0.2)
-tooltip_text = "
-"
-texture_normal = ExtResource("3_bqqt6")
-texture_pressed = ExtResource("4_rtw2f")
-texture_hover = ExtResource("3_8ln24")
-script = ExtResource("7_oa1go")
+texture_normal = ExtResource("2_5dd4i")
+texture_pressed = ExtResource("3_lgwnu")
+texture_hover = ExtResource("4_flqon")
+script = ExtResource("7_7b55j")
 
-[node name="Rules" type="Label" parent="Rules"]
+[node name="Label" type="Label" parent="Rules"]
 layout_mode = 0
-offset_left = 295.0
-offset_top = 455.0
-offset_right = 733.0
-offset_bottom = 705.0
-theme_override_fonts/font = ExtResource("4_wu84c")
+offset_left = 300.0
+offset_top = 445.0
+offset_right = 855.0
+offset_bottom = 885.0
+theme_override_fonts/font = ExtResource("6_1ajci")
 theme_override_font_sizes/font_size = 100
-text = "RULES
-
-"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(331, 325)
-scale = Vector2(0.632324, 0.632324)
-texture = ExtResource("8_tbmy8")
+text = "RULES"
 
 [node name="Credits" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 515.0
-offset_top = 905.0
-offset_right = 1539.0
-offset_bottom = 1929.0
+offset_left = 507.0
+offset_top = 909.0
+offset_right = 1531.0
+offset_bottom = 1933.0
 scale = Vector2(0.08, 0.08)
-texture_normal = ExtResource("3_bqqt6")
-texture_pressed = ExtResource("4_rtw2f")
-texture_hover = ExtResource("3_8ln24")
+texture_normal = ExtResource("2_5dd4i")
+texture_pressed = ExtResource("3_lgwnu")
+texture_hover = ExtResource("4_flqon")
+script = ExtResource("8_5pajh")
 
 [node name="Label" type="Label" parent="Credits"]
 layout_mode = 0
-offset_left = 260.001
-offset_top = 440.001
-offset_right = 835.001
-offset_bottom = 900.001
-theme_override_fonts/font = ExtResource("4_wu84c")
+offset_left = 262.5
+offset_top = 450.0
+offset_right = 850.5
+offset_bottom = 890.0
+theme_override_fonts/font = ExtResource("6_1ajci")
 theme_override_font_sizes/font_size = 90
-text = "Credits"
+text = "CREDITS"
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(338, 335)
+scale = Vector2(0.655518, 0.655518)
+texture = ExtResource("9_j7ex8")
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Rules" to="Rules" method="_on_pressed"]
+[connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]
