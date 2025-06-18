@@ -20,6 +20,9 @@ var posizione = 0
 var DELTA = 0
 var i = 0
 
+var rng = RandomNumberGenerator.new()
+
+
 func _ready() -> void:
 
 	position.x = -100
@@ -55,7 +58,7 @@ func _process(delta: float) -> void:
 			
 		if $DelayTime.is_stopped():
 			$DelayTime.start(fireDelay)
-			var bulletenemy = plBulletenemy.instantiate()
+			var bulletenemy = plBulletenemy2.instantiate()
 			bulletenemy.position = position
 			get_tree().current_scene.add_child(bulletenemy)
 			
@@ -83,7 +86,9 @@ func _process(delta: float) -> void:
 				var bulletenemy0 = plBulletenemy_3.instantiate()
 				bulletenemy0.position = position
 				get_tree().current_scene.add_child(bulletenemy0)
-
+		else:
+			var rand = randi_range(-1,1)
+			Global.rand = rand
 
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
