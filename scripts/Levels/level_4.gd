@@ -16,8 +16,8 @@ const pl31 = preload("res://scenes/enemy3_l2.tscn")
 const pl11 = preload("res://scenes/enemy1_l2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
 const pl41 = preload("res://scenes/enemy4_l2.tscn")
-const GAMEOVER = preload("res://scenes/game_over_4.tscn")
-const VICTORY = preload("res://scenes/victory_4.tscn")
+const GAMEOVER = preload("res://scenes/game_over.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria1.tscn")
 const BOSS = preload("res://scenes/FinalBoss.tscn")
 const Enemy_Right = preload("res://scenes/boss_supporter_right.tscn")
 const Enemy_Left = preload("res://scenes/boss_supporter_left.tscn")
@@ -103,6 +103,7 @@ func _process(delta: float) -> void:
 				
 	if Global.score >= 1970:
 		deltafine += delta
-		var victory = VICTORY.instantiate()
-		get_tree().current_scene.add_child(victory)
+		if deltafine > 1:
+			var victory = VICTORY.instantiate()
+			get_tree().current_scene.add_child(victory)
 		

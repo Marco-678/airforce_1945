@@ -14,8 +14,8 @@ const pl6 = preload("res://scenes/enemy_6.tscn")
 const pl8 = preload("res://scenes/enemy_8.tscn")
 const pl51 = preload("res://scenes/enemy5_l2.tscn")
 const MINIBOSS = preload("res://scenes/mini_boss.tscn")
-const VICTORY = preload("res://scenes/victory_3.tscn")
-const GAMEOVER = preload("res://scenes/game_over_3.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria1.tscn")
+const GAMEOVER = preload("res://scenes/game_over.tscn")
 var deltafine = 0
 
 
