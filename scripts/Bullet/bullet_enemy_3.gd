@@ -2,12 +2,13 @@ extends Area2D
 
 const EXPLOSION = preload("res://scenes/explosionpro.tscn")
 
-var posin = position.x
+var posinx = position.x
+var posiny = position.y
 
 func _physics_process(delta2: float) -> void:
 	
 	position.y += 20
-	position.x = position.y / Global.rand + posin
+	position.x = (position.y + (Global.rand * posinx) - posiny) / Global.rand
 
 
 func _on_area_entered(area: Area2D) -> void:
