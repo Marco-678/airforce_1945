@@ -8,16 +8,15 @@ const plBossLaser = preload("res://scenes/boss_laser.tscn")
 
 
 var plBulletenemy = preload("res://scenes/bullet_leftenemy.tscn")
-var plBulletenemy2 = preload("res://scenes/bullet_enemy_2.tscn")
 var plBulletenemy3 = preload("res://scenes/bullet_rightenemy.tscn")
 const plBulletenemy_3 = preload("res://scenes/bullet_enemy_3.tscn")
 
 var delaygrosso = 2
-var fireDelay0 = 0.1
+var fireDelay0 = 0.3
 var fireDelay = 0.3
 var fireDelay2 = 0.3
 var fireDelay3 = 0.3
-var life = 80
+var life = 100
 var LaserDelay = 3
 var posizione = 0
 var DELTA = 0
@@ -64,12 +63,7 @@ func _process(delta: float) -> void:
 			var bulletenemy = plBulletenemy.instantiate()
 			bulletenemy.position = position
 			get_tree().current_scene.add_child(bulletenemy)
-			
-		if $DelayTime2.is_stopped():
-			$DelayTime2.start(fireDelay2)
-			var bulletenemy2 = plBulletenemy2.instantiate()
-			bulletenemy2.position = position
-			get_tree().current_scene.add_child(bulletenemy2)
+		
 			
 		if $DelayTime3.is_stopped():
 			$DelayTime3.start(fireDelay3)
@@ -97,6 +91,10 @@ func _process(delta: float) -> void:
 			else:
 				var rand = 4
 				Global.rand = rand
+
+
+	
+
 
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1

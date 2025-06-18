@@ -29,45 +29,45 @@ func _process(delta: float) -> void:
 		enemy3.position = position
 		get_tree().current_scene.add_child(enemy3)
 		
-	if DELTA > 13 and DELTA < 20 and $Timer.is_stopped():
+	if DELTA > 16 and DELTA < 23 and $Timer.is_stopped():
 		$Timer.start(delay2)
 		var enemy2 = pl2.instantiate()
 		enemy2.position = position
 		get_tree().current_scene.add_child(enemy2)
 	
-	if DELTA > 20 and DELTA < 30 and $Timer.is_stopped():
+	if DELTA > 23 and DELTA < 33 and $Timer.is_stopped():
 		$Timer.start(delay4)
 		var enemy8 = pl8.instantiate()
 		enemy8.position = position
 		get_tree().current_scene.add_child(enemy8)
 		
-	if DELTA > 28 and DELTA < 34 and $Timer.is_stopped():
+	if DELTA > 31 and DELTA < 37 and $Timer.is_stopped():
 		$Timer.start(delay3)
 		var enemy2 = pl2.instantiate()
 		enemy2.position = position
 		get_tree().current_scene.add_child(enemy2)
 		
-	if DELTA > 35 and DELTA < 41 and $Timer.is_stopped():
+	if DELTA > 38 and DELTA < 44 and $Timer.is_stopped():
 		$Timer.start(delay3)
 		var enemy6 = pl6.instantiate()
 		enemy6.position = position
 		get_tree().current_scene.add_child(enemy6)
 	
-	if DELTA > 46 and DELTA < 48 and $Timer.is_stopped():
+	if DELTA > 49 and DELTA < 51 and $Timer.is_stopped():
 		print("stable")
 		$Timer.start(delay4)
 		var miniboss = MINIBOSS.instantiate()
 		miniboss.position = position
 		get_tree().current_scene.add_child(miniboss)
 		
-	if DELTA > 49 and DELTA < 53 and $Timer.is_stopped():
+	if DELTA > 52 and DELTA < 56 and $Timer.is_stopped():
 		print("afses")
 		$Timer.start(delay2)
 		var enemy5 = pl5.instantiate()
 		enemy5.position = position
 		get_tree().current_scene.add_child(enemy5)
 		
-	if Global.score >= 1240:
+	if Global.score >= 1440:
 		deltafine += delta
 		var victory = VICTORY.instantiate()
 		get_tree().current_scene.add_child(victory)

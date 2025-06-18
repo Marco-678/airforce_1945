@@ -35,15 +35,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3utt0"]
-radius = 63.0
-height = 506.0
+radius = 44.0
+height = 482.0
 
 [node name="LeftRightLasers" type="Area2D"]
 collision_layer = 8
 script = ExtResource("1_ty30p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.224175, 0.298611)
+scale = Vector2(0.176902, 0.284143)
 sprite_frames = SubResource("SpriteFrames_8au2j")
 autoplay = "default"
 frame_progress = 0.768007

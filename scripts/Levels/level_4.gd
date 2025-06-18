@@ -82,6 +82,15 @@ func _process(delta: float) -> void:
 		var Eright = Enemy_Right.instantiate()
 		Eright.position = position
 		get_tree().current_scene.add_child(Eright)
+	
+	if DELTA > 75 and DELTA <78 and $Timer.is_stopped():
+		$Timer.start(LateralDelay)
+		var Eleft = Enemy_Left.instantiate()
+		Eleft.position = position
+		get_tree().current_scene.add_child(Eleft)
+		var Eright = Enemy_Right.instantiate()
+		Eright.position = position
+		get_tree().current_scene.add_child(Eright)
 		
 		
 		

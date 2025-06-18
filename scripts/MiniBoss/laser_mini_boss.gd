@@ -12,5 +12,5 @@ func _physics_process(delta2: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	Global.life -=7
+	Global.life -= 7
 	queue_free()

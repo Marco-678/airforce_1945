@@ -35,3 +35,5 @@ one_shot = true
 
 [node name="TimerSmall" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
