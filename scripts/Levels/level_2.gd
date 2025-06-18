@@ -18,7 +18,7 @@ const GAMEOVER = preload("res://scenes/game_over.tscn")
 const VICTORY = preload("res://scenes/Schermata di vittoria1.tscn")
 
 var deltafine = 0
-
+var ceppo = 0
 
 func _process(delta: float) -> void:
 	DELTA += delta
@@ -77,15 +77,17 @@ func _process(delta: float) -> void:
 		
 	if Global.score >= 960:
 		deltafine += delta
-		var victory = VICTORY.instantiate()
-		get_tree().current_scene.add_child(victory)
-		Global.score = 0
-		Global.life = 25
+		if deltafine > 1 and ceppo == 0:
+			var victory = VICTORY.instantiate()
+			get_tree().current_scene.add_child(victory)
+			ceppo = 1
+			Global.level  = 2
 	
 	if Global.life <= 0:
 			deltafine += delta
-			if deltafine > 1:
+			if deltafine > 1 and ceppo == 0:
 				var gameover = GAMEOVER.instantiate()
 				get_tree().current_scene.add_child(gameover)
-				
+				ceppo = 1
+				Global.level  = 2
 		

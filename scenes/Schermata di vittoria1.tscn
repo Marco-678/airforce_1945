@@ -25,11 +25,6 @@ offset_top = 277.0
 offset_right = 502.0
 offset_bottom = 754.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(303.5, 440.5)
-scale = Vector2(0.40875, 0.40875)
-texture = ExtResource("9_x03ii")
-
 [node name="Retry" type="TextureButton" parent="."]
 layout_mode = 2
 offset_left = 323.0
@@ -53,6 +48,11 @@ texture_normal = ExtResource("5_h4v28")
 texture_pressed = ExtResource("6_cgoof")
 texture_hover = ExtResource("7_xmfjj")
 script = ExtResource("8_50jm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(303.5, 440.5)
+scale = Vector2(0.40875, 0.40875)
+texture = ExtResource("9_x03ii")
 
 [connection signal="pressed" from="Retry" to="Retry" method="_on_pressed"]
 [connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_pressed"]
