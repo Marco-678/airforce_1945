@@ -1,26 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://deakc5crojdw2"]
+[gd_scene load_steps=8 format=3 uid="uid://deakc5crojdw2"]
 
 [ext_resource type="Script" uid="uid://dvc7mo3t4pc2p" path="res://scripts/Enemies/Enemy1_l2.gd" id="1_1pkeq"]
-[ext_resource type="Texture2D" uid="uid://d07722v4vjptu" path="res://assets/Asset varie/F-15-Fighter-Jet.png" id="2_4ks81"]
+[ext_resource type="Texture2D" uid="uid://f7k3w8cu684c" path="res://assets/enemyblu/frame-01 (7).png" id="2_dcpr1"]
+[ext_resource type="Texture2D" uid="uid://88id8tekxu41" path="res://assets/enemyblu/frame-02 (5).png" id="3_pq1lv"]
+[ext_resource type="Texture2D" uid="uid://0qd8ybgyeym1" path="res://assets/enemyblu/frame-03 (5).png" id="4_a5nem"]
+[ext_resource type="Texture2D" uid="uid://b8ej6q3co85w4" path="res://assets/enemyblu/frame-04 (5).png" id="5_t1mxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykx4h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dcpr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pq1lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a5nem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t1mxh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_41qqs"]
-radius = 38.0
+radius = 54.0
 height = 138.0
 
 [node name="Enemy1_l2" type="Area2D"]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_1pkeq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -16)
-shape = SubResource("CapsuleShape2D_41qqs")
-
-[node name="F-15-fighter-jet" type="Sprite2D" parent="."]
-position = Vector2(-5, 0)
-rotation = 3.14159
-scale = Vector2(0.234375, 0.263672)
-texture = ExtResource("2_4ks81")
 
 [node name="DelayTime" type="Timer" parent="."]
 one_shot = true
@@ -30,5 +43,16 @@ one_shot = true
 
 [node name="DelayTime3" type="Timer" parent="."]
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykx4h")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_41qqs")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
