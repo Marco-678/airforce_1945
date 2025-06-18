@@ -16,7 +16,3 @@ func _on_area_entered(area: Area2D) -> void:
 	get_tree().current_scene.add_child(explosion)
 	queue_free()
 	
-
-
-
-	

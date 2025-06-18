@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://tpoyi2fxtbdx"]
+
+[ext_resource type="Texture2D" uid="uid://c27p5stixksmp" path="res://assets/Asset varie/pngimg.com - game_over_PNG42.png" id="1_yg4jw"]
+[ext_resource type="Texture2D" uid="uid://0ijf0fgojhoe" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281.png" id="2_cepx8"]
+[ext_resource type="Texture2D" uid="uid://indhoy4c2oev" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 pressed.png" id="3_2qf20"]
+[ext_resource type="Texture2D" uid="uid://bmodkyg0h0tud" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 hover.png" id="4_3mnfu"]
+[ext_resource type="Script" uid="uid://bih080714smri" path="res://scripts/Buttons/main_menu.gd" id="5_sj56o"]
+[ext_resource type="Texture2D" uid="uid://dtod38iiy0wu1" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436.png" id="6_7jin1"]
+[ext_resource type="Texture2D" uid="uid://cm0vxlcgfxrvk" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436 pressed.png" id="7_lpm2a"]
+[ext_resource type="Texture2D" uid="uid://dh4v24oy0usn0" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436 hover.png" id="8_1vp84"]
+[ext_resource type="Script" uid="uid://16jw2odgyhtv" path="res://scripts/Buttons/retry4.gd" id="9_yj16s"]
+
+[node name="GameOver4" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 224.0
+offset_right = 537.0
+offset_bottom = 756.0
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(300, 400)
+scale = Vector2(0.531746, 0.531746)
+texture = ExtResource("1_yg4jw")
+
+[node name="MainMenu" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 561.0
+offset_right = 623.0
+offset_bottom = 1061.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_cepx8")
+texture_pressed = ExtResource("3_2qf20")
+texture_hover = ExtResource("4_3mnfu")
+script = ExtResource("5_sj56o")
+
+[node name="Retry" type="TextureButton" parent="."]
+offset_left = 323.0
+offset_top = 590.0
+offset_right = 823.0
+offset_bottom = 1197.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("6_7jin1")
+texture_pressed = ExtResource("7_lpm2a")
+texture_hover = ExtResource("8_1vp84")
+script = ExtResource("9_yj16s")
+
+[connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_pressed"]
+[connection signal="pressed" from="Retry" to="Retry" method="_on_pressed"]

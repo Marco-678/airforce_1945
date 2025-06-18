@@ -78,5 +78,3 @@ func _process(delta: float) -> void:
 		if deltafine > 1:
 			var gameover = GAMEOVER.instantiate()
 			get_tree().current_scene.add_child(gameover)
-			Global.score = 0
-			Global.life = 25

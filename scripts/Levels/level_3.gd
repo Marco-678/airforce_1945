@@ -15,7 +15,7 @@ const pl8 = preload("res://scenes/enemy_8.tscn")
 const pl51 = preload("res://scenes/enemy5_l2.tscn")
 const MINIBOSS = preload("res://scenes/mini_boss.tscn")
 const VICTORY = preload("res://scenes/victory_3.tscn")
-const GAMEOVER = preload("res://scenes/game_over.tscn")
+const GAMEOVER = preload("res://scenes/game_over_3.tscn")
 var deltafine = 0
 
 
@@ -79,5 +79,4 @@ func _process(delta: float) -> void:
 			if deltafine > 1:
 				var gameover = GAMEOVER.instantiate()
 				get_tree().current_scene.add_child(gameover)
-				Global.score = 0
-				Global.life = 25
+				

@@ -16,7 +16,7 @@ const pl31 = preload("res://scenes/enemy3_l2.tscn")
 const pl11 = preload("res://scenes/enemy1_l2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
 const pl41 = preload("res://scenes/enemy4_l2.tscn")
-const GAMEOVER = preload("res://scenes/game_over.tscn")
+const GAMEOVER = preload("res://scenes/game_over_4.tscn")
 const VICTORY = preload("res://scenes/victory_4.tscn")
 const BOSS = preload("res://scenes/FinalBoss.tscn")
 const Enemy_Right = preload("res://scenes/boss_supporter_right.tscn")
@@ -83,7 +83,7 @@ func _process(delta: float) -> void:
 		Eright.position = position
 		get_tree().current_scene.add_child(Eright)
 	
-	if DELTA > 75 and DELTA <78 and $Timer.is_stopped():
+	if DELTA > 75 and DELTA < 78 and $Timer.is_stopped():
 		$Timer.start(LateralDelay)
 		var Eleft = Enemy_Left.instantiate()
 		Eleft.position = position
@@ -99,12 +99,10 @@ func _process(delta: float) -> void:
 			if deltafine > 1:
 				var gameover = GAMEOVER.instantiate()
 				get_tree().current_scene.add_child(gameover)
-				Global.score = 0
-				Global.life = 25
+				
 				
 	if Global.score >= 1980:
 		deltafine += delta
 		var victory = VICTORY.instantiate()
 		get_tree().current_scene.add_child(victory)
-		Global.score = 0
-		Global.life = 25
+		

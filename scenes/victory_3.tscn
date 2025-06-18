@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtod38iiy0wu1" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436.png" id="2_4w2ue"]
 [ext_resource type="Texture2D" uid="uid://cm0vxlcgfxrvk" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436 pressed.png" id="3_y4w2d"]
 [ext_resource type="Texture2D" uid="uid://dh4v24oy0usn0" path="res://assets/buttons/turn-back-arrow-pixel-icon-left-side-vector-56446436 hover.png" id="4_k45ko"]
-[ext_resource type="Script" uid="uid://bl8nvrqka3j42" path="res://scripts/buttons/retry3.gd" id="5_s10rc"]
+[ext_resource type="Script" uid="uid://bl8nvrqka3j42" path="res://scripts/Buttons/retry3.gd" id="5_s10rc"]
 [ext_resource type="Texture2D" uid="uid://0ijf0fgojhoe" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281.png" id="6_gjtqk"]
 [ext_resource type="Texture2D" uid="uid://indhoy4c2oev" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 pressed.png" id="7_o2th5"]
 [ext_resource type="Texture2D" uid="uid://bmodkyg0h0tud" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 hover.png" id="8_alwyd"]
