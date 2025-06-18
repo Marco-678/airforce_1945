@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgfp4mhnrsmix" path="res://assets/buttons/1000043445 (1).png" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://dug8ahy8wfr5r" path="res://assets/buttons/1000043445 (1) hover.png" id="4_rtw2f"]
 [ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="4_wu84c"]
-[ext_resource type="Script" uid="uid://drp21fd2j8h1a" path="res://scripts/Buttons/rules.gd" id="7_oa1go"]
+[ext_resource type="Script" path="res://scripts/Buttons/rules.gd" id="7_oa1go"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

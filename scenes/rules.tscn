@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btwl3rg4rmfoy"]
+[gd_scene load_steps=3 format=3 uid="uid://buiacqju0vana"]
 
 [ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_3spy8"]
+[ext_resource type="FontFile" uid="uid://bqo6sm0gybmla" path="res://assets/Asset varie/PixelOperator8.ttf" id="2_66h5d"]
 
 [node name="Rules" type="Control"]
 layout_mode = 3
@@ -17,5 +18,21 @@ texture = ExtResource("1_3spy8")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -17.0
+offset_top = 49.0
+offset_right = 807.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.976352, 0.477976, 0, 1)
+theme_override_fonts/font = ExtResource("2_66h5d")
+text = "                 The Rules are very simple:
+
+
+
+- In order to win you must defeat all the enemies.
+
+- In order to shoot you have to press \"Space\".
+
+- You should play each level in order of difficulty.
+
+
+	   Have fun!"
