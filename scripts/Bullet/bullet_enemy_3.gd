@@ -5,6 +5,11 @@ const EXPLOSION = preload("res://scenes/explosionpro.tscn")
 var posinx = position.x
 var posiny = position.y
 
+func _ready() -> void:
+	posinx = position.x
+	posiny = position.y
+	print(Global.rand)
+
 func _physics_process(delta2: float) -> void:
 	
 	position.y += 20
