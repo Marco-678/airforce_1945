@@ -24,7 +24,6 @@ var DELTA = 0
 var i = 0
 
 var rng = RandomNumberGenerator.new()
-var rand = 0
 
 func _ready() -> void:
 
@@ -90,13 +89,7 @@ func _process(delta: float) -> void:
 				bulletenemy0.position = position
 				get_tree().current_scene.add_child(bulletenemy0)
 		else:
-			var random = randi_range(0,1)
-			
-			if random == 0:
-				rand = -1
-			else:
-				rand = 1
-		
+			var rand = randf_range(-3,3)
 			Global.rand = rand
 
 func _on_area_entered(area: Area2D) -> void:
