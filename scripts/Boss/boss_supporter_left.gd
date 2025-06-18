@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	
-	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 900:
+	if position.x > 0 and position.x < 600 and position.y > 0 and position.y < 1024:
 			
 			
 		if $OpLaserDelay.is_stopped():

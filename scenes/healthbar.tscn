@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceykrxd24yk5v"]
+[gd_scene load_steps=5 format=3 uid="uid://ceykrxd24yk5v"]
 
 [ext_resource type="Script" uid="uid://j43l0jtaipqe" path="res://scripts/Player/healthbar.gd" id="1_8wl12"]
+[ext_resource type="Texture2D" uid="uid://y4bdhu7emhts" path="res://assets/Asset varie/76-769017_health-bar-vuota-health-bar-pixel-art-clipart.png" id="2_vjxg4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjxg4"]
 bg_color = Color(0, 0, 0, 1)
@@ -10,10 +11,17 @@ bg_color = Color(0.580392, 1, 0.0901961, 1)
 
 [node name="Healthbar" type="ProgressBar"]
 z_index = -1
-offset_left = 36.0
-offset_top = 53.0
-offset_right = 472.0
-offset_bottom = 80.0
+offset_left = 48.0
+offset_top = 93.0
+offset_right = 286.0
+offset_bottom = 147.0
+scale = Vector2(0.7, 0.7)
 theme_override_styles/background = SubResource("StyleBoxFlat_vjxg4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8wl12")
+show_percentage = false
 script = ExtResource("1_8wl12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(93, 27)
+scale = Vector2(0.337437, 0.335581)
+texture = ExtResource("2_vjxg4")

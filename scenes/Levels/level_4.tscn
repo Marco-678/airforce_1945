@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2sob508y3lb4"]
+[gd_scene load_steps=13 format=3 uid="uid://2sob508y3lb4"]
 
 [ext_resource type="PackedScene" uid="uid://or3dw6ioxttp" path="res://scenes/parallax_background.tscn" id="1_cmqrq"]
 [ext_resource type="Script" uid="uid://b1vbb0u8yiny2" path="res://scripts/Levels/level_4.gd" id="1_q42d0"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" uid="uid://pepvnd1tl0wg" path="res://scripts/Player/score.gd" id="5_3bqyq"]
 [ext_resource type="Script" uid="uid://cc4bvkwgnak0d" path="res://scripts/Player/life.gd" id="6_lpoy4"]
 [ext_resource type="PackedScene" uid="uid://ceykrxd24yk5v" path="res://scenes/healthbar.tscn" id="7_p3qha"]
+[ext_resource type="Texture2D" uid="uid://0ijf0fgojhoe" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281.png" id="9_lpoy4"]
+[ext_resource type="Texture2D" uid="uid://indhoy4c2oev" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 pressed.png" id="10_p3qha"]
+[ext_resource type="Texture2D" uid="uid://bmodkyg0h0tud" path="res://assets/buttons/home-menu-ui-game-button-pixel-art-icon-vector-56446281 hover.png" id="11_jj8o0"]
+[ext_resource type="Script" uid="uid://bih080714smri" path="res://scripts/Buttons/main_menu.gd" id="12_2vp10"]
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_q42d0")
@@ -18,35 +22,54 @@ script = ExtResource("1_q42d0")
 position = Vector2(317, 857)
 script = ExtResource("3_r00u7")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
-[node name="Score" type="Label" parent="CanvasLayer"]
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 30.0
+[node name="Healthbar" parent="." instance=ExtResource("7_p3qha")]
+z_index = 1
+offset_left = 47.0
+offset_top = 57.0
+offset_right = 285.0
+offset_bottom = 111.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Healthbar"]
+
+[node name="Score" type="Label" parent="Healthbar/CanvasLayer"]
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 42.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_7a7m7")
 theme_override_font_sizes/font_size = 30
 script = ExtResource("5_3bqyq")
 metadata/_edit_use_anchors_ = true
 
-[node name="Life" type="Label" parent="CanvasLayer"]
+[node name="Life" type="Label" parent="Healthbar/CanvasLayer"]
 anchors_preset = -1
 anchor_top = 0.028
 anchor_right = 0.067
 anchor_bottom = 0.04
-offset_left = 5.0
-offset_top = 7.328
-offset_right = 4.8
-offset_bottom = 18.04
+offset_left = 20.0
+offset_top = 35.328
+offset_right = 12.8
+offset_bottom = 49.04
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_7a7m7")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
 script = ExtResource("6_lpoy4")
 
-[node name="Healthbar" parent="." instance=ExtResource("7_p3qha")]
-z_index = 1
-
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="MainMenu" type="TextureButton" parent="."]
+offset_left = 541.0
+offset_top = 9.0
+offset_right = 1041.0
+offset_bottom = 616.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("9_lpoy4")
+texture_pressed = ExtResource("10_p3qha")
+texture_hover = ExtResource("11_jj8o0")
+script = ExtResource("12_2vp10")
 
 [connection signal="area_entered" from="Airplane" to="Airplane" method="_on_area_entered"]
+[connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_pressed"]

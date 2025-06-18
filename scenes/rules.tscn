@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://btwl3rg4rmfoy"]
+
+[ext_resource type="Texture2D" uid="uid://nqi6apmpy5as" path="res://assets/Asset varie/Firefly_pixel background for a ww2 shoot em up 519724.jpg" id="1_3spy8"]
+
+[node name="Rules" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(299, 516)
+scale = Vector2(0.418403, 0.418403)
+texture = ExtResource("1_3spy8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

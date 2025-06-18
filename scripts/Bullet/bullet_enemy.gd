@@ -7,6 +7,9 @@ var speed = 600
 
 func _physics_process(delta: float) -> void:
 	
+	if not(position.x >= 0 and position.x <= 600 and position.y >= 0 and position.y <= 1024):
+		queue_free()
+	
 	position.y += speed * delta
 
 
