@@ -62,6 +62,7 @@ animations = [{
 size = Vector2(69, 258)
 
 [node name="BossLaser" type="Area2D"]
+collision_layer = 8
 script = ExtResource("1_py5vf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

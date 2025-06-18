@@ -39,6 +39,7 @@ radius = 63.0
 height = 506.0
 
 [node name="LeftRightLasers" type="Area2D"]
+collision_layer = 8
 script = ExtResource("1_ty30p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
