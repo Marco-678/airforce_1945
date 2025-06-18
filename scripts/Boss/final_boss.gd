@@ -24,6 +24,7 @@ var DELTA = 0
 var i = 0
 
 var rng = RandomNumberGenerator.new()
+var rng2 = RandomNumberGenerator.new
 
 func _ready() -> void:
 
@@ -60,21 +61,21 @@ func _process(delta: float) -> void:
 			
 		if $DelayTime.is_stopped():
 			$DelayTime.start(fireDelay)
-			var bulletenemy = plBulletenemy2.instantiate()
+			var bulletenemy = plBulletenemy.instantiate()
 			bulletenemy.position = position
 			get_tree().current_scene.add_child(bulletenemy)
 			
-#		if $DelayTime2.is_stopped():
-#			$DelayTime2.start(fireDelay2)
-#			var bulletenemy2 = plBulletenemy2.instantiate()
-#			bulletenemy2.position = position
-#			get_tree().current_scene.add_child(bulletenemy2)
-#			
-#		if $DelayTime3.is_stopped():
-#			$DelayTime3.start(fireDelay3)
-#			var bulletenemy3 = plBulletenemy3.instantiate()
-#			bulletenemy3.position = position
-#			get_tree().current_scene.add_child(bulletenemy3)
+		if $DelayTime2.is_stopped():
+			$DelayTime2.start(fireDelay2)
+			var bulletenemy2 = plBulletenemy2.instantiate()
+			bulletenemy2.position = position
+			get_tree().current_scene.add_child(bulletenemy2)
+			
+		if $DelayTime3.is_stopped():
+			$DelayTime3.start(fireDelay3)
+			var bulletenemy3 = plBulletenemy3.instantiate()
+			bulletenemy3.position = position
+			get_tree().current_scene.add_child(bulletenemy3)
 			
 		if $DelayTimeLaser.is_stopped():
 			$DelayTimeLaser.start(LaserDelay)
@@ -89,8 +90,13 @@ func _process(delta: float) -> void:
 				bulletenemy0.position = position
 				get_tree().current_scene.add_child(bulletenemy0)
 		else:
-			var rand = randf_range(-3,3)
-			Global.rand = rand
+			var random = randi_range(0,1)
+			if random == 0:
+				var rand = -4
+				Global.rand = rand
+			else:
+				var rand = 4
+				Global.rand = rand
 
 func _on_area_entered(area: Area2D) -> void:
 	life -= 1
