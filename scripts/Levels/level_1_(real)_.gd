@@ -11,7 +11,7 @@ const pl5 = preload("res://scenes/enemy_5.tscn")
 const pl2 = preload("res://scenes/enemy_2.tscn")
 const pl4 = preload("res://scenes/enemy_4.tscn")
 const GAMEOVER = preload("res://scenes/game_over.tscn")
-const VICTORY = preload("res://scenes/Schermata di vittoria.tscn")
+const VICTORY = preload("res://scenes/Schermata di vittoria1.tscn")
 
 
 

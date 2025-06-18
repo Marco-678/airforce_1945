@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://bih080714smri" path="res://scripts/Buttons/main_menu.gd" id="8_50jm0"]
 [ext_resource type="Texture2D" uid="uid://gnsnfskqdgac" path="res://assets/Asset varie/you-win-t-shirt-design-pixelated-trophy_11627740 (1) (1).png" id="9_x03ii"]
 
-[node name="Victory" type="Control"]
+[node name="Victory1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
