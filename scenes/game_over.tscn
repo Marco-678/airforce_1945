@@ -20,12 +20,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
 offset_left = 96.0
 offset_top = 277.0
 offset_right = 502.0
 offset_bottom = 754.0
 
 [node name="Retry" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 323.0
 offset_top = 590.0
 offset_right = 823.0
@@ -37,6 +39,7 @@ texture_hover = ExtResource("3_56v3a")
 script = ExtResource("4_o57t2")
 
 [node name="MainMenu" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 121.0
 offset_top = 590.0
 offset_right = 621.0
