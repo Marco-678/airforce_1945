@@ -14,7 +14,7 @@ var rand = rng.randf_range(0.1,2)
 
 
 func _ready() -> void:
-	print(rand)
+	
 	position.x = 700
 
 func _physics_process(delta: float) -> void:

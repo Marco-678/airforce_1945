@@ -73,7 +73,7 @@ func _process(delta: float) -> void:
 		var boss = BOSS.instantiate()
 		boss.position = position
 		get_tree().current_scene.add_child(boss)
-		print("boss")
+		
 	
 	if DELTA > 60 and DELTA <63 and $Timer.is_stopped():
 		$Timer.start(LateralDelay)
@@ -94,16 +94,23 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(Eright)
 		
 		
+	if DELTA > 85 and Global.score < 1970:
+		if ceppo == 0:
+			var gameover = GAMEOVER.instantiate()
+			get_tree().current_scene.add_child(gameover)
+			ceppo = 1
+			Global.level  = 1
+		
 		
 	if Global.life <= 0:
-			deltafine += delta
-			if deltafine > 1 and ceppo == 0:
-				var gameover = GAMEOVER.instantiate()
-				get_tree().current_scene.add_child(gameover)
-				ceppo = 1
-				Global.level  = 4
+		deltafine += delta
+		if deltafine > 1 and ceppo == 0:
+			var gameover = GAMEOVER.instantiate()
+			get_tree().current_scene.add_child(gameover)
+			ceppo = 1
+			Global.level  = 4
 				
-	if Global.score >= 1970:
+	if Global.score >= 2000:
 		deltafine += delta
 		if deltafine > 1 and ceppo == 0:
 			var victory = VICTORY.instantiate()

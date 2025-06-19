@@ -66,6 +66,13 @@ func _process(delta: float) -> void:
 		enemy1.position = position
 		get_tree().current_scene.add_child(enemy1)
 		
+	if DELTA > 65 and Global.score < 560:
+		if ceppo == 0:
+			var gameover = GAMEOVER.instantiate()
+			get_tree().current_scene.add_child(gameover)
+			ceppo = 1
+			Global.level  = 1
+		
 	if Global.score >= 560:
 		deltafine += delta
 		if deltafine > 1 and ceppo == 0:

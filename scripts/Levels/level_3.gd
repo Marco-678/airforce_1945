@@ -55,18 +55,25 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(enemy6)
 	
 	if DELTA > 49 and DELTA < 51 and $Timer.is_stopped():
-		print("stable")
 		$Timer.start(delay4)
 		var miniboss = MINIBOSS.instantiate()
 		miniboss.position = position
 		get_tree().current_scene.add_child(miniboss)
 		
 	if DELTA > 52 and DELTA < 56 and $Timer.is_stopped():
-		print("afses")
 		$Timer.start(delay2)
 		var enemy5 = pl5.instantiate()
 		enemy5.position = position
 		get_tree().current_scene.add_child(enemy5)
+		
+		
+	if DELTA > 70 and Global.score < 1440:
+		if ceppo == 0:
+			var gameover = GAMEOVER.instantiate()
+			get_tree().current_scene.add_child(gameover)
+			ceppo = 1
+			Global.level  = 1
+		
 		
 	if Global.score >= 1440:
 		deltafine += delta
