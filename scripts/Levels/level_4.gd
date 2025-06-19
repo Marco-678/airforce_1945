@@ -94,7 +94,7 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(Eright)
 		
 		
-	if DELTA > 85 and Global.score < 1970:
+	if DELTA > 85 and Global.score < 2000:
 		if ceppo == 0:
 			var gameover = GAMEOVER.instantiate()
 			get_tree().current_scene.add_child(gameover)
