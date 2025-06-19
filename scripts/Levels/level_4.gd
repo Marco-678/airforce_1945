@@ -73,7 +73,7 @@ func _process(delta: float) -> void:
 		var boss = BOSS.instantiate()
 		boss.position = position
 		get_tree().current_scene.add_child(boss)
-		
+	
 	
 	if DELTA > 60 and DELTA <63 and $Timer.is_stopped():
 		$Timer.start(LateralDelay)

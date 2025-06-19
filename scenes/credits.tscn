@@ -36,7 +36,8 @@ text = "Credits:
 - bdragon1727.itch.io
 - pin.it/oY7K4yMWY
 - deviantart.com
-- artstation.com"
+- artstation.com
+- icon-icons.com"
 
 [node name="BackToMainMenu" type="TextureButton" parent="."]
 layout_mode = 0
