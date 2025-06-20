@@ -110,7 +110,7 @@ func _process(delta: float) -> void:
 			ceppo = 1
 			Global.level  = 4
 				
-	if Global.score >= 2000:
+	if Global.score >= 1980:
 		deltafine += delta
 		if deltafine > 1 and ceppo == 0:
 			var victory = VICTORY.instantiate()
